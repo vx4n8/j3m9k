@@ -1,0 +1,22 @@
+{
+  "name": "Recce Survey List",
+  "short_name": "Recce Survey",
+  "description": "Site Survey Recce List by Patrice Roblin",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a1628",
+  "theme_color": "#0a1628",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'><rect width='192' height='192' fill='%230a1628'/><rect x='52' y='44' width='88' height='104' rx='6' fill='none' stroke='%23c8a84b' stroke-width='4'/><rect x='72' y='32' width='48' height='24' rx='6' fill='none' stroke='%23c8a84b' stroke-width='4'/><rect x='80' y='38' width='32' height='12' rx='3' fill='%23c8a84b' opacity='0.5'/><line x1='68' y1='84' x2='124' y2='84' stroke='%23c8a84b' stroke-width='3' opacity='0.5'/><line x1='68' y1='100' x2='124' y2='100' stroke='%23c8a84b' stroke-width='3' opacity='0.5'/><polyline points='68,124 80,136 114,102' fill='none' stroke='%23c8a84b' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/></svg>",
+      "sizes": "192x192",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><rect width='512' height='512' fill='%230a1628'/><rect x='136' y='116' width='240' height='280' rx='8' fill='none' stroke='%23c8a84b' stroke-width='10'/><rect x='192' y='84' width='128' height='64' rx='8' fill='none' stroke='%23c8a84b' stroke-width='10'/><rect x='212' y='100' width='88' height='32' rx='6' fill='%23c8a84b' opacity='0.5'/><line x1='180' y1='224' x2='332' y2='224' stroke='%23c8a84b' stroke-width='8' opacity='0.5'/><line x1='180' y1='268' x2='332' y2='268' stroke='%23c8a84b' stroke-width='8' opacity='0.5'/><polyline points='180,326 212,358 308,270' fill='none' stroke='%23c8a84b' stroke-width='14' stroke-linecap='round' stroke-linejoin='round'/></svg>",
+      "sizes": "512x512",
+      "type": "image/svg+xml"
+    }
+  ]
+}
