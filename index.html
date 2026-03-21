@@ -39,10 +39,7 @@ header {
   padding: 28px 40px; display: flex; align-items: center; gap: 28px;
   position: relative; overflow: hidden;
 }
-header::before {
-  content: ''; position: absolute; bottom: -1px; left: 0; right: 0; height: 1px;
-  background: linear-gradient(90deg, transparent, var(--gold), transparent);
-}
+header::before { content: ''; position: absolute; bottom: -1px; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--gold), transparent); }
 .logo-wrap { flex-shrink: 0; }
 .logo-wrap svg { width: 72px; height: 72px; }
 .header-text h1 { font-size: 2rem; font-weight: 700; letter-spacing: 0.08em; color: var(--white); text-transform: uppercase; line-height: 1; }
@@ -56,23 +53,13 @@ main { max-width: 820px; margin: 0 auto; padding: 40px 20px 60px; }
 .form-intro h2 { font-size: 2.4rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--white); }
 .form-intro .gold-line { width: 60px; height: 2px; background: var(--gold); margin: 12px auto; }
 .form-intro p { color: var(--grey); font-size: 0.9rem; max-width: 500px; margin: 0 auto; line-height: 1.6; }
-.progress-wrap {
-  background: rgba(18,32,64,0.9); border: 1px solid rgba(200,168,75,0.2);
-  border-radius: 4px; padding: 14px 20px; margin-bottom: 28px;
-  display: flex; align-items: center; gap: 16px;
-}
+.progress-wrap { background: rgba(18,32,64,0.9); border: 1px solid rgba(200,168,75,0.2); border-radius: 4px; padding: 14px 20px; margin-bottom: 28px; display: flex; align-items: center; gap: 16px; }
 .progress-label { font-size: 0.8rem; color: var(--gold); letter-spacing: 0.1em; text-transform: uppercase; white-space: nowrap; }
 .progress-track { flex: 1; height: 5px; background: rgba(200,168,75,0.12); border-radius: 3px; overflow: hidden; }
 .progress-fill { height: 100%; background: linear-gradient(90deg, var(--gold), var(--gold-light)); border-radius: 3px; transition: width 0.4s; width: 0%; }
 .progress-pct { font-size: 1rem; font-weight: 600; color: var(--gold); min-width: 36px; text-align: right; }
-
-/* SECTIONS */
 .section { background: var(--card-bg); border: 1px solid rgba(200,168,75,0.2); border-radius: 4px; margin-bottom: 24px; overflow: hidden; backdrop-filter: blur(4px); }
-.section-header {
-  background: linear-gradient(90deg, var(--navy-light), var(--navy-mid));
-  border-bottom: 1px solid rgba(200,168,75,0.25);
-  padding: 14px 24px; display: flex; align-items: center; gap: 14px;
-}
+.section-header { background: linear-gradient(90deg, var(--navy-light), var(--navy-mid)); border-bottom: 1px solid rgba(200,168,75,0.25); padding: 14px 24px; display: flex; align-items: center; gap: 14px; }
 .section-header.collapsible { cursor: pointer; user-select: none; }
 .section-header.collapsible:hover { background: linear-gradient(90deg, #1e3660, var(--navy-mid)); }
 .section-num { background: var(--gold); color: var(--navy); font-weight: 700; font-size: 0.85rem; width: 28px; height: 28px; border-radius: 2px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
@@ -83,8 +70,6 @@ main { max-width: 820px; margin: 0 auto; padding: 40px 20px 60px; }
 .section.collapsed .collapse-icon { transform: rotate(-90deg); }
 .section-body { padding: 24px; }
 .section.collapsed .section-body { display: none; }
-
-/* FIELDS */
 .sub-label { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin: 20px 0 10px; padding-bottom: 6px; border-bottom: 1px solid rgba(200,168,75,0.15); display: flex; align-items: center; gap: 8px; }
 .sub-label:first-child { margin-top: 0; }
 .field-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
@@ -97,7 +82,6 @@ main { max-width: 820px; margin: 0 auto; padding: 40px 20px 60px; }
   .photo-header { flex-wrap: wrap; gap: 8px; }
   .photo-label { width: 100%; }
   .photo-actions { width: 100%; justify-content: flex-start; flex-wrap: wrap; }
-  .photo-btn { font-size: 0.75rem; padding: 6px 10px; }
   .yn-row { flex-wrap: wrap; gap: 8px; }
   .yn-btns { width: 100%; justify-content: flex-start; }
   .loader-btns { flex-direction: column; }
@@ -106,22 +90,15 @@ main { max-width: 820px; margin: 0 auto; padding: 40px 20px 60px; }
 .field { display: flex; flex-direction: column; gap: 5px; }
 .field.full { grid-column: 1 / -1; }
 label { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); }
-input[type=text], input[type=email], input[type=tel],
-input[type=date], input[type=time], input[type=number],
-textarea, select {
-  background: rgba(10,22,40,0.8); border: 1px solid rgba(200,168,75,0.3);
-  border-radius: 3px; color: var(--white);
+input[type=text], input[type=email], input[type=tel], input[type=date], input[type=time], input[type=number], textarea, select {
+  background: rgba(10,22,40,0.8); border: 1px solid rgba(200,168,75,0.3); border-radius: 3px; color: var(--white);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-  font-size: 0.92rem; padding: 9px 13px; outline: none;
-  transition: border-color 0.2s, box-shadow 0.2s; width: 100%;
+  font-size: 0.92rem; padding: 9px 13px; outline: none; transition: border-color 0.2s, box-shadow 0.2s; width: 100%;
 }
 input:focus, textarea:focus, select:focus { border-color: var(--gold); box-shadow: 0 0 0 2px rgba(200,168,75,0.13); }
 textarea { resize: none; min-height: 70px; overflow: hidden; }
 select option { background: var(--navy-mid); color: var(--white); }
-input[type=date]::-webkit-calendar-picker-indicator,
-input[type=time]::-webkit-calendar-picker-indicator { filter: invert(0.7) sepia(1) saturate(2) hue-rotate(5deg); cursor: pointer; }
-
-/* YES/NO */
+input[type=date]::-webkit-calendar-picker-indicator, input[type=time]::-webkit-calendar-picker-indicator { filter: invert(0.7) sepia(1) saturate(2) hue-rotate(5deg); cursor: pointer; }
 .yn-list { display: flex; flex-direction: column; }
 .yn-item { border-bottom: 1px solid rgba(200,168,75,0.08); }
 .yn-item:last-child { border-bottom: none; }
@@ -133,13 +110,9 @@ input[type=time]::-webkit-calendar-picker-indicator { filter: invert(0.7) sepia(
 .yn-btn:hover { border-color: var(--gold); color: var(--gold); }
 .yn-btn.yes { background: rgba(39,174,96,0.18); border-color: var(--success); color: #2ecc71; }
 .yn-btn.no  { background: rgba(192,57,43,0.18); border-color: var(--danger); color: #e74c3c; }
-
-/* NOTES */
 .section-notes { margin-top: 18px; padding-top: 16px; border-top: 1px solid rgba(200,168,75,0.12); }
 .section-notes label { display: block; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }
 .section-notes textarea { min-height: 64px; font-size: 0.88rem; color: var(--grey-light); }
-
-/* HAZARDS */
 .hazard-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
 @media(max-width:560px){ .hazard-grid { grid-template-columns: 1fr; } }
 .hazard-item { display: flex; align-items: center; gap: 10px; padding: 9px 12px; background: rgba(10,22,40,0.4); border: 1px solid rgba(200,168,75,0.1); border-radius: 3px; cursor: pointer; transition: all 0.15s; }
@@ -148,8 +121,6 @@ input[type=time]::-webkit-calendar-picker-indicator { filter: invert(0.7) sepia(
 .hazard-item label { font-size: 0.85rem; color: var(--grey-light); text-transform: none; letter-spacing: 0; font-weight: 400; cursor: pointer; line-height: 1.3; }
 .hazard-item:has(input:checked) { border-color: rgba(192,57,43,0.5); background: rgba(192,57,43,0.08); }
 .hazard-item:has(input:checked) label { color: var(--white); }
-
-/* MAP */
 .map-row { display: flex; gap: 10px; margin-bottom: 10px; }
 .map-row input { flex: 1; }
 .map-btn { padding: 9px 18px; background: linear-gradient(135deg, var(--gold), var(--gold-light)); color: var(--navy); border: none; border-radius: 3px; font-size: 0.9rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; transition: all 0.2s; white-space: nowrap; }
@@ -161,30 +132,42 @@ input[type=time]::-webkit-calendar-picker-indicator { filter: invert(0.7) sepia(
 .map-placeholder svg { opacity: 0.35; }
 #mapFrame { width: 100%; height: 260px; border: none; display: none; }
 
-/* PHOTOS */
-.photo-list { display: flex; flex-direction: column; gap: 10px; }
+/* PHOTO SLOTS — compact with small thumbnail */
+.photo-list { display: flex; flex-direction: column; gap: 8px; }
 .photo-item { background: rgba(10,22,40,0.5); border: 1px solid rgba(200,168,75,0.18); border-radius: 3px; overflow: hidden; }
-.photo-header { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 10px 14px; }
-.photo-label { font-size: 0.88rem; color: var(--grey-light); flex: 1; }
-.photo-actions { display: flex; gap: 7px; align-items: center; flex-shrink: 0; }
+.photo-header { display: flex; align-items: center; gap: 10px; padding: 8px 12px; }
+.photo-thumb-small { width: 42px; height: 42px; object-fit: cover; border-radius: 2px; border: 1px solid rgba(200,168,75,0.25); flex-shrink: 0; display: none; cursor: pointer; }
+.photo-thumb-small.visible { display: block; }
+.photo-label { font-size: 0.85rem; color: var(--grey-light); flex: 1; line-height: 1.3; }
+.photo-actions { display: flex; gap: 6px; align-items: center; flex-shrink: 0; }
 .photo-status { font-size: 0.7rem; padding: 2px 8px; border-radius: 2px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; background: rgba(138,155,181,0.1); border: 1px solid rgba(138,155,181,0.25); color: var(--grey); }
 .photo-status.done { background: rgba(39,174,96,0.15); border-color: rgba(39,174,96,0.4); color: #2ecc71; }
-.photo-btn { display: flex; align-items: center; gap: 5px; padding: 5px 11px; border-radius: 2px; border: 1px solid rgba(200,168,75,0.35); background: rgba(200,168,75,0.07); color: var(--gold); font-size: 0.78rem; font-weight: 600; letter-spacing: 0.07em; cursor: pointer; transition: all 0.13s; text-transform: uppercase; }
+.photo-btn { display: flex; align-items: center; gap: 4px; padding: 5px 10px; border-radius: 2px; border: 1px solid rgba(200,168,75,0.35); background: rgba(200,168,75,0.07); color: var(--gold); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.07em; cursor: pointer; transition: all 0.13s; text-transform: uppercase; }
 .photo-btn:hover { background: rgba(200,168,75,0.16); border-color: var(--gold); }
-.photo-btn svg { width: 13px; height: 13px; flex-shrink: 0; }
-.photo-preview { display: none; padding: 0 14px 14px; flex-direction: column; gap: 8px; }
-.photo-preview.visible { display: flex; }
-.photo-thumb { max-width: 100%; max-height: 200px; border-radius: 3px; border: 1px solid rgba(200,168,75,0.25); display: block; }
-.retake-btn { display: flex; align-items: center; gap: 5px; padding: 4px 11px; width: fit-content; border-radius: 2px; border: 1px solid rgba(192,57,43,0.45); background: rgba(192,57,43,0.1); color: #e74c3c; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.07em; cursor: pointer; transition: all 0.13s; text-transform: uppercase; }
-.retake-btn:hover { background: rgba(192,57,43,0.2); }
+.photo-btn svg { width: 12px; height: 12px; flex-shrink: 0; }
 .hidden-file { display: none; }
 
+/* SITE PHOTOS GRID */
+.site-photos-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 10px; }
+.site-photo-cell { background: rgba(10,22,40,0.5); border: 1px solid rgba(200,168,75,0.15); border-radius: 3px; overflow: hidden; cursor: pointer; transition: border-color 0.15s; }
+.site-photo-cell:hover { border-color: rgba(200,168,75,0.4); }
+.site-photo-cell img { width: 100%; height: 100px; object-fit: cover; display: block; }
+.site-photo-cell-label { font-size: 0.7rem; color: var(--grey); padding: 5px 7px; line-height: 1.3; }
+.site-photo-empty { opacity: 0.3; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 130px; gap: 6px; font-size: 0.72rem; color: var(--grey); }
+
+/* LIGHTBOX */
+.lightbox { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.92); z-index: 9999; align-items: center; justify-content: center; flex-direction: column; gap: 12px; padding: 20px; }
+.lightbox.open { display: flex; }
+.lightbox img { max-width: 100%; max-height: 75vh; border-radius: 4px; object-fit: contain; }
+.lightbox-label { font-size: 0.85rem; color: var(--grey-light); text-align: center; }
+.lightbox-close { position: absolute; top: 16px; right: 20px; font-size: 2rem; color: var(--white); cursor: pointer; line-height: 1; background: none; border: none; }
+
 /* SAVE BUTTONS */
-.save-wrap { text-align: center; margin-top: 36px; display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
-.btn-save { background: linear-gradient(135deg, var(--gold), var(--gold-light)); color: var(--navy); font-size: 1.1rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; border: none; padding: 14px 42px; border-radius: 3px; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 18px rgba(200,168,75,0.28); }
+.action-wrap { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 36px; }
+.btn-save { background: linear-gradient(135deg, var(--gold), var(--gold-light)); color: var(--navy); font-size: 1rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; border: none; padding: 14px 32px; border-radius: 3px; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 18px rgba(200,168,75,0.28); }
 .btn-save:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(200,168,75,0.42); }
-.btn-print { background: transparent; color: var(--gold); font-size: 1rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; border: 1px solid rgba(200,168,75,0.4); padding: 13px 32px; border-radius: 3px; cursor: pointer; transition: all 0.2s; }
-.btn-print:hover { background: rgba(200,168,75,0.1); border-color: var(--gold); }
+.btn-outline { background: transparent; color: var(--gold); font-size: 1rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; border: 1px solid rgba(200,168,75,0.4); padding: 13px 32px; border-radius: 3px; cursor: pointer; transition: all 0.2s; }
+.btn-outline:hover { background: rgba(200,168,75,0.1); border-color: var(--gold); }
 
 footer { text-align: center; padding: 22px 20px; color: var(--grey); font-size: 0.75rem; letter-spacing: 0.05em; border-top: 1px solid rgba(200,168,75,0.1); }
 .footer-inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 10px; }
@@ -192,15 +175,23 @@ footer { text-align: center; padding: 22px 20px; color: var(--grey); font-size: 
 .footer-inner a:hover { color: var(--gold); }
 .footer-inner a svg { width: 11px; height: 11px; stroke: var(--gold); flex-shrink: 0; }
 .footer-sep { opacity: 0.4; }
+
 @media print {
   body { background: white !important; color: #000; }
   header { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-  .save-wrap, .photo-btn, .retake-btn, .map-btn, .section-header.collapsible { display: none !important; }
+  .action-wrap, .photo-btn, .map-btn, .lightbox { display: none !important; }
   .section.collapsed .section-body { display: block !important; }
 }
 </style>
 </head>
 <body>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <button class="lightbox-close" onclick="closeLightbox()">&#10005;</button>
+  <img id="lightboxImg" src="" alt="">
+  <div class="lightbox-label" id="lightboxLabel"></div>
+</div>
 
 <header>
   <div class="logo-wrap">
@@ -238,20 +229,25 @@ footer { text-align: center; padding: 22px 20px; color: var(--grey); font-size: 
   <div class="form-intro">
     <h2>Tech Recce / Location Survey</h2>
     <div class="gold-line"></div>
-    <p>Complete all sections on site. Save your survey or export as a ZIP file with all photos. Print to PDF to share with the team.</p>
+    <p>Complete all sections on site.</p>
   </div>
 
-  <!-- SURVEY LOADER -->
+  <!-- LOADER -->
   <div class="loader-panel" id="loaderPanel">
     <div class="loader-btns">
       <button class="loader-btn new" onclick="newSurvey()">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
         New Survey
       </button>
       <button class="loader-btn load" id="btnLoadSurvey" onclick="toggleLoader()">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z"/></svg>
-        Load Saved Survey
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z"/></svg>
+        Load Survey
       </button>
+      <button class="loader-btn load" onclick="document.getElementById('importInput').click()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+        Import from File
+      </button>
+      <input type="file" id="importInput" accept=".zip,.json,.recce" style="display:none" onchange="importFile(this)">
     </div>
     <div class="loader-list" id="loaderList" style="display:none;"></div>
   </div>
@@ -263,7 +259,7 @@ footer { text-align: center; padding: 22px 20px; color: var(--grey); font-size: 
     <span class="progress-pct" id="progressPct">0%</span>
   </div>
 
-  <!-- SECTION 0: JOB DETAILS (not collapsible — always open) -->
+  <!-- SECTION 0: JOB DETAILS -->
   <div class="section" id="sec0">
     <div class="section-header">
       <div class="section-num">0</div>
@@ -282,14 +278,13 @@ footer { text-align: center; padding: 22px 20px; color: var(--grey); font-size: 
           <select id="f_state">
             <option value="">— Select —</option>
             <option>QLD</option><option>NSW</option><option>VIC</option>
-            <option>SA</option><option>WA</option><option>TAS</option>
-            <option>ACT</option><option>NT</option>
+            <option>SA</option><option>WA</option><option>TAS</option><option>ACT</option><option>NT</option>
           </select>
         </div>
-        <div class="field"><label>Venue Booking Contact Name</label><input type="text" id="f_contact" placeholder="Booking contact name"></div>
-        <div class="field"><label>Venue Booking Contact Phone</label><input type="tel" id="f_phone" placeholder="+61 4xx xxx xxx"></div>
-        <div class="field"><label>Venue Tech Contact (On the Day)</label><input type="text" id="f_techContact" placeholder="Name of venue tech on shoot day"></div>
-        <div class="field"><label>Venue Tech Contact Phone</label><input type="tel" id="f_techPhone" placeholder="+61 4xx xxx xxx"></div>
+        <div class="field"><label>Venue Booking Contact</label><input type="text" id="f_contact" placeholder="Name"></div>
+        <div class="field"><label>Booking Contact Phone</label><input type="tel" id="f_phone" placeholder="+61 4xx xxx xxx"></div>
+        <div class="field"><label>Venue Tech Contact (On the Day)</label><input type="text" id="f_techContact" placeholder="Name"></div>
+        <div class="field"><label>Tech Contact Phone</label><input type="tel" id="f_techPhone" placeholder="+61 4xx xxx xxx"></div>
       </div>
     </div>
   </div>
@@ -308,10 +303,7 @@ footer { text-align: center; padding: 22px 20px; color: var(--grey); font-size: 
       </div>
       <div class="map-container">
         <div class="map-placeholder" id="mapPlaceholder">
-          <svg width="44" height="44" viewBox="0 0 48 48" fill="none">
-            <path d="M24 4C16.27 4 10 10.27 10 18c0 11.25 14 26 14 26s14-14.75 14-26c0-7.73-6.27-14-14-14z" stroke="#c8a84b" stroke-width="2" fill="none"/>
-            <circle cx="24" cy="18" r="4" stroke="#c8a84b" stroke-width="2" fill="none"/>
-          </svg>
+          <svg width="44" height="44" viewBox="0 0 48 48" fill="none"><path d="M24 4C16.27 4 10 10.27 10 18c0 11.25 14 26 14 26s14-14.75 14-26c0-7.73-6.27-14-14-14z" stroke="#c8a84b" stroke-width="2" fill="none"/><circle cx="24" cy="18" r="4" stroke="#c8a84b" stroke-width="2" fill="none"/></svg>
           <span>Enter the address above and tap <strong>Show Map</strong></span>
         </div>
         <iframe id="mapFrame" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -340,14 +332,12 @@ footer { text-align: center; padding: 22px 20px; color: var(--grey); font-size: 
       <div class="field-grid" style="margin-bottom:14px;">
         <div class="field"><label>Maximum Audience Occupancy</label><input type="number" id="f_occupancy" placeholder="e.g. 250"></div>
         <div class="field"><label>Bump-in / Loading Window</label><input type="text" id="f_bumpIn" placeholder="e.g. 08:00 – 14:00"></div>
-        <div class="field"><label>Ceiling / Roof Height (metres)</label><input type="text" id="f_ceilingH" placeholder="e.g. 4.5m — measure or estimate"></div>
+        <div class="field"><label>Ceiling / Roof Height (metres)</label><input type="text" id="f_ceilingH" placeholder="e.g. 4.5m"></div>
         <div class="field"><label>Venue Type</label>
           <select id="f_venueType">
             <option value="">— Select —</option>
-            <option>Indoor</option>
-            <option>Outdoor</option>
-            <option>Outdoor Undercover</option>
-            <option>Mixed Indoor / Outdoor</option>
+            <option>Indoor</option><option>Outdoor</option>
+            <option>Outdoor Undercover</option><option>Mixed Indoor / Outdoor</option>
           </select>
         </div>
       </div>
@@ -356,12 +346,12 @@ footer { text-align: center; padding: 22px 20px; color: var(--grey); font-size: 
     </div>
   </div>
 
-  <!-- SECTION 3: INTERNET & CONNECTIVITY -->
+  <!-- SECTION 3: INTERNET -->
   <div class="section collapsed" id="sec3">
     <div class="section-header collapsible" onclick="toggleSection('sec3')">
       <div class="section-num">3</div>
       <div class="section-title">Internet &amp; Connectivity</div>
-      <span class="section-tag">Check first — critical for TX</span>
+      <span class="section-tag">Critical for TX</span>
       <span class="collapse-icon">&#9660;</span>
     </div>
     <div class="section-body">
@@ -379,7 +369,7 @@ footer { text-align: center; padding: 22px 20px; color: var(--grey); font-size: 
         <div class="field"><label>Speed Test Result</label><input type="text" id="f_speed" placeholder="e.g. Down 45 / Up 12 Mbps"></div>
         <div class="field"><label>ISP / Network Contact</label><input type="text" id="f_ispContact" placeholder="e.g. Venue IT — ext 204"></div>
       </div>
-      <div class="section-notes"><label>Internet Notes</label><textarea id="n_internet" placeholder="Wired connection availability, router location, bandwidth limitations…"></textarea></div>
+      <div class="section-notes"><label>Internet Notes</label><textarea id="n_internet" placeholder="Wired connection, router location, bandwidth limitations…"></textarea></div>
     </div>
   </div>
 
@@ -393,13 +383,13 @@ footer { text-align: center; padding: 22px 20px; color: var(--grey); font-size: 
     </div>
     <div class="section-body">
       <div class="yn-list" id="yn_sound"></div>
-      <div class="sub-label" style="margin-top:18px;">Noise Limiter</div>
+      <div class="sub-label">Noise Limiter</div>
       <div class="yn-list" id="yn_noiselimiter"></div>
       <div class="field-grid" style="margin-top:14px;">
         <div class="field"><label>Noise Curfew Time (if any)</label><input type="time" id="f_noiseCurfew"></div>
-        <div class="field"><label>Noise Curfew Contact / Who Controls It</label><input type="text" id="f_noiseCurfewContact" placeholder="e.g. Venue manager — John Smith"></div>
+        <div class="field"><label>Curfew Contact / Who Controls It</label><input type="text" id="f_noiseCurfewContact" placeholder="e.g. Venue manager — John Smith"></div>
         <div class="field"><label>Limiter Threshold (dB)</label><input type="text" id="f_limiterDb" placeholder="e.g. 95 dB"></div>
-        <div class="field"><label>Who Controls / Resets the Limiter</label><input type="text" id="f_limiterContact" placeholder="e.g. Venue duty manager"></div>
+        <div class="field"><label>Who Controls / Resets Limiter</label><input type="text" id="f_limiterContact" placeholder="e.g. Venue duty manager"></div>
       </div>
       <div class="section-notes"><label>Sound Notes</label><textarea id="n_sound" placeholder="Observations, follow-up items…"></textarea></div>
     </div>
@@ -418,7 +408,7 @@ footer { text-align: center; padding: 22px 20px; color: var(--grey); font-size: 
     </div>
   </div>
 
-  <!-- SECTION 6: HOUSE LIGHTING & SOUND SYSTEM -->
+  <!-- SECTION 6: HOUSE SYSTEM -->
   <div class="section collapsed" id="sec6">
     <div class="section-header collapsible" onclick="toggleSection('sec6')">
       <div class="section-num">6</div>
@@ -431,9 +421,9 @@ footer { text-align: center; padding: 22px 20px; color: var(--grey); font-size: 
         <div class="field"><label>House Lighting System / Brand</label><input type="text" id="f_houseLx" placeholder="e.g. ETC Ion, generic dimmer rack"></div>
         <div class="field"><label>DMX Patch Points Available</label><input type="text" id="f_dmxPatch" placeholder="e.g. 2x DMX outlets stage left"></div>
         <div class="field"><label>House PA System / Brand</label><input type="text" id="f_housePA" placeholder="e.g. JBL line array, ceiling speakers"></div>
-        <div class="field"><label>Audio Patch / Connection Points</label><input type="text" id="f_audioPatch" placeholder="e.g. XLR patch panel at FOH position"></div>
+        <div class="field"><label>Audio Patch / Connection Points</label><input type="text" id="f_audioPatch" placeholder="e.g. XLR patch panel at FOH"></div>
       </div>
-      <div class="section-notes"><label>House System Notes</label><textarea id="n_housesystem" placeholder="Control locations, patch details, compatibility notes…"></textarea></div>
+      <div class="section-notes"><label>House System Notes</label><textarea id="n_housesystem" placeholder="Control locations, patch details, compatibility…"></textarea></div>
     </div>
   </div>
 
@@ -472,7 +462,7 @@ footer { text-align: center; padding: 22px 20px; color: var(--grey); font-size: 
       </div>
       <div class="sub-label">Storage</div>
       <div class="yn-list" id="yn_storage"></div>
-      <div class="section-notes"><label>Access &amp; Storage Notes</label><textarea id="n_accessstorage" placeholder="Route description, obstacles, ramps needed, cable trays, security checkpoints, storage size and location…"></textarea></div>
+      <div class="section-notes"><label>Access &amp; Storage Notes</label><textarea id="n_accessstorage" placeholder="Route description, obstacles, ramps needed, cable trays, security checkpoints, storage details…"></textarea></div>
     </div>
   </div>
 
@@ -488,8 +478,8 @@ footer { text-align: center; padding: 22px 20px; color: var(--grey); font-size: 
       <div class="field-grid" style="margin-top:14px;">
         <div class="field"><label>Distance from Truck Bay to Venue</label><input type="text" id="f_truckDist" placeholder="e.g. 40m level surface"></div>
         <div class="field"><label>Overhead Clearance Height</label><input type="text" id="f_truckClear" placeholder="Min. 3.8m required"></div>
-        <div class="field"><label>Loading Dock Hours</label><input type="text" id="f_dockHours" placeholder="e.g. Mon–Fri 06:00–22:00, Sat 07:00–18:00"></div>
-        <div class="field"><label>Loading Dock Contact / Supervisor</label><input type="text" id="f_dockContact" placeholder="e.g. Building manager — call on arrival"></div>
+        <div class="field"><label>Loading Dock Hours</label><input type="text" id="f_dockHours" placeholder="e.g. Mon–Fri 06:00–22:00"></div>
+        <div class="field"><label>Loading Dock Contact</label><input type="text" id="f_dockContact" placeholder="e.g. Building manager"></div>
       </div>
       <div class="section-notes"><label>Truck &amp; Loading Notes</label><textarea id="n_truck" placeholder="Bollards, slopes, time restrictions, turning radius…"></textarea></div>
     </div>
@@ -509,7 +499,7 @@ footer { text-align: center; padding: 22px 20px; color: var(--grey); font-size: 
     </div>
   </div>
 
-  <!-- SECTION 11: FIRST AID & EMERGENCY -->
+  <!-- SECTION 11: FIRST AID -->
   <div class="section collapsed" id="sec11">
     <div class="section-header collapsible" onclick="toggleSection('sec11')">
       <div class="section-num">11</div>
@@ -521,14 +511,14 @@ footer { text-align: center; padding: 22px 20px; color: var(--grey); font-size: 
       <div class="field-grid" style="margin-top:14px;">
         <div class="field"><label>First Aid Kit Location</label><input type="text" id="f_firstAidKit" placeholder="e.g. Stage left, wall mounted"></div>
         <div class="field"><label>AED / Defibrillator Location</label><input type="text" id="f_aed" placeholder="e.g. Main foyer near reception"></div>
-        <div class="field"><label>Nearest Hospital / Medical Centre</label><input type="text" id="f_hospital" placeholder="e.g. Royal Brisbane Hospital — 2.3km"></div>
+        <div class="field"><label>Nearest Hospital / Medical Centre</label><input type="text" id="f_hospital" placeholder="e.g. Royal Brisbane — 2.3km"></div>
         <div class="field"><label>Emergency Muster Point</label><input type="text" id="f_muster" placeholder="e.g. Car park B, north end"></div>
       </div>
       <div class="section-notes"><label>First Aid &amp; Emergency Notes</label><textarea id="n_firstaid" placeholder="Venue first aid officer, emergency procedures, evacuation route…"></textarea></div>
     </div>
   </div>
 
-  <!-- SECTION 12: VENUE RISK ASSESSMENT & DUTY OF CARE -->
+  <!-- SECTION 12: RISK & DUTY OF CARE -->
   <div class="section collapsed" id="sec12">
     <div class="section-header collapsible" onclick="toggleSection('sec12')">
       <div class="section-num">12</div>
@@ -538,14 +528,14 @@ footer { text-align: center; padding: 22px 20px; color: var(--grey); font-size: 
     <div class="section-body">
       <div class="yn-list" id="yn_risk"></div>
       <div class="field-grid" style="margin-top:14px;">
-        <div class="field"><label>Venue Risk Assessment Document Ref</label><input type="text" id="f_riskDoc" placeholder="e.g. VRA-2024-032 — request from venue manager"></div>
+        <div class="field"><label>Venue Risk Assessment Document Ref</label><input type="text" id="f_riskDoc" placeholder="e.g. VRA-2024-032"></div>
         <div class="field"><label>Venue WHS / Safety Officer Contact</label><input type="text" id="f_whsContact" placeholder="Name and phone number"></div>
         <div class="field full"><label>Known Risks / Items Flagged in Venue RA</label><textarea id="n_risk" placeholder="List any specific risks noted in the venue's own risk assessment…"></textarea></div>
       </div>
     </div>
   </div>
 
-  <!-- SECTION 13: SKETCH & FLOOR PLAN -->
+  <!-- SECTION 13: SKETCH -->
   <div class="section collapsed" id="sec13">
     <div class="section-header collapsible" onclick="toggleSection('sec13')">
       <div class="section-num">13</div>
@@ -564,22 +554,17 @@ footer { text-align: center; padding: 22px 20px; color: var(--grey); font-size: 
         <div class="photo-list">
           <div class="photo-item">
             <div class="photo-header">
-              <span class="photo-label">Hand sketch / floor plan — include dimensions, ceiling height, items of interest</span>
+              <img class="photo-thumb-small" id="th_sketch" src="" alt="Sketch" onclick="openLightbox('sketch')">
+              <span class="photo-label">Hand sketch / floor plan — dimensions, ceiling height, items of interest</span>
               <div class="photo-actions">
                 <span class="photo-status" id="st_sketch">Pending</span>
                 <button class="photo-btn" onclick="openCamera('sketch')">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg>
-                  Camera
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg>Camera
                 </button>
                 <button class="photo-btn" onclick="openGallery('sketch')">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-                  Upload
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>Upload
                 </button>
               </div>
-            </div>
-            <div class="photo-preview" id="pv_sketch">
-              <img class="photo-thumb" id="th_sketch" src="" alt="Sketch">
-              <button class="retake-btn" onclick="openCamera('sketch')">↺ Retake / Replace</button>
             </div>
             <input type="file" class="hidden-file" id="cam_sketch" accept="image/*" capture="environment" onchange="handlePhoto(this,'sketch')">
             <input type="file" class="hidden-file" id="gal_sketch" accept="image/*" onchange="handlePhoto(this,'sketch')">
@@ -603,6 +588,19 @@ footer { text-align: center; padding: 22px 20px; color: var(--grey); font-size: 
     </div>
   </div>
 
+  <!-- SECTION 15: SITE PHOTOS -->
+  <div class="section collapsed" id="sec15">
+    <div class="section-header collapsible" onclick="toggleSection('sec15')">
+      <div class="section-num">15</div>
+      <div class="section-title">Site Photos</div>
+      <span class="section-tag">Tap any photo to enlarge</span>
+      <span class="collapse-icon">&#9660;</span>
+    </div>
+    <div class="section-body">
+      <div class="site-photos-grid" id="sitePhotosGrid"></div>
+    </div>
+  </div>
+
   <!-- SAVE & EXPORT -->
   <div class="section">
     <div class="section-header">
@@ -610,37 +608,21 @@ footer { text-align: center; padding: 22px 20px; color: var(--grey); font-size: 
       <div class="section-title">Save &amp; Export</div>
     </div>
     <div class="section-body">
-      <div class="sub-label">Save in this browser</div>
-      <p style="font-size:0.85rem;color:var(--grey);margin-bottom:12px;line-height:1.6;">Name your survey and save — come back and keep editing anytime on this device. Photos stored at full quality with no size limit.</p>
+      <div class="sub-label">Save to this device</div>
       <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:flex-end;">
         <div class="field" style="flex:1;min-width:200px;">
           <label>Survey Name</label>
           <input type="text" id="saveName" placeholder="e.g. Crown Casino — Main Ballroom">
         </div>
-        <button id="btnSave" class="btn-save" style="padding:9px 22px;font-size:0.9rem;white-space:nowrap;flex-shrink:0;" onclick="saveSurvey()">Save to Browser</button>
+        <button id="btnSave" class="btn-save" style="padding:9px 22px;font-size:0.9rem;white-space:nowrap;flex-shrink:0;" onclick="saveSurvey()">Save Survey</button>
       </div>
       <div id="savedList" style="margin-top:14px;"></div>
-
-      <div class="sub-label" style="margin-top:24px;">Export to file</div>
-      <p style="font-size:0.85rem;color:var(--grey);margin-bottom:14px;line-height:1.6;">Exports a ZIP containing the full survey and all photos clearly labelled. Send via WhatsApp, AirDrop, email or Google Drive. Import back into the app on any device.</p>
-      <div style="display:flex;gap:10px;flex-wrap:wrap;">
-        <button class="btn-save" style="padding:10px 22px;font-size:0.9rem;" onclick="exportZip()">&#8659;&nbsp; <span id="exportBtnLabel">Export ZIP</span></button>
-        <button class="btn-print" style="padding:10px 22px;font-size:0.9rem;" onclick="document.getElementById('importInput').click()">&#8657;&nbsp; Import ZIP / File</button>
-        <input type="file" id="importInput" accept=".zip,.json,.recce" style="display:none" onchange="importFile(this)">
-      </div>
-      <div id="iosSharePanel" style="display:none;margin-top:14px;background:rgba(200,168,75,0.08);border:1px solid rgba(200,168,75,0.3);border-radius:4px;padding:14px 18px;">
-        <p style="font-size:0.88rem;color:var(--grey-light);margin-bottom:10px;line-height:1.6;">
-          <strong style="color:var(--gold);">iPhone / iPad detected.</strong> Your ZIP is ready — tap below then choose <strong>Save to Files</strong>.
-        </p>
-        <button class="btn-save" style="padding:9px 22px;font-size:0.9rem;" onclick="iosShare()">&#8679;&nbsp; Share / Save to Files</button>
-      </div>
     </div>
   </div>
 
-  <div class="save-wrap">
-    <button class="btn-save" onclick="openPhotoReport()">&#128247;&nbsp; Photo Report</button>
-    <button class="btn-print" onclick="setTimeout(()=>window.print(),300)">&#128438;&nbsp; Print / Save as PDF</button>
-    <p style="font-size:0.78rem;color:var(--grey);margin-top:8px;text-align:center;">In the print dialog choose <strong style="color:var(--grey-light);">Save as PDF</strong> to email to the team.</p>
+  <div class="action-wrap">
+    <button class="btn-save" onclick="exportSurvey()">Export Survey</button>
+    <button class="btn-outline" onclick="generateReport()">Generate Report</button>
   </div>
 
 </main>
@@ -669,13 +651,25 @@ footer { text-align: center; padding: 22px 20px; color: var(--grey); font-size: 
 <script>
 // ── SAFARI DETECTION ──────────────────────────────────────────────────────────
 const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-if (isSafari) { const l = document.getElementById('exportBtnLabel'); if (l) l.textContent = 'Share / Save to Files'; }
 
-// ── COLLAPSIBLE SECTIONS ──────────────────────────────────────────────────────
-function toggleSection(id) {
-  const sec = document.getElementById(id);
-  if (sec) sec.classList.toggle('collapsed');
+// ── COLLAPSIBLE ───────────────────────────────────────────────────────────────
+function toggleSection(id) { document.getElementById(id).classList.toggle('collapsed'); }
+
+// ── LIGHTBOX ──────────────────────────────────────────────────────────────────
+function openLightbox(id) {
+  const photo = window._photos[id];
+  if (!photo || !photo.blob) return;
+  const url = URL.createObjectURL(photo.blob);
+  const lb = document.getElementById('lightbox');
+  const img = document.getElementById('lightboxImg');
+  const lbl = document.getElementById('lightboxLabel');
+  img.src = url;
+  img.onload = () => URL.revokeObjectURL(url);
+  const item = photoItems.find(p=>p.id===id);
+  lbl.textContent = item ? item.label : (id === 'sketch' ? 'Sketch / Floor Plan' : id);
+  lb.classList.add('open');
 }
+function closeLightbox() { document.getElementById('lightbox').classList.remove('open'); }
 
 // ── YES/NO DATA ───────────────────────────────────────────────────────────────
 const ynSections = {
@@ -687,15 +681,15 @@ const ynSections = {
     { id:'in1', q:'Is venue WiFi available and reliable?' },
     { id:'in2', q:'Is wired (ethernet) internet connection available?' },
     { id:'in3', q:'Is 4G / 5G signal sufficient for backup connectivity?' },
-    { id:'in4', q:'Is the internet connection sufficient for live streaming or file transfer?' },
+    { id:'in4', q:'Is the connection sufficient for live streaming or file transfer?' },
   ],
   yn_sound: [
-    { id:'s1', q:'Is the roof tin/metal or acoustically treated? (Rain noise is a major risk for live TV)' },
+    { id:'s1', q:'Is the roof tin/metal or acoustically treated? (Rain noise risk for live TV)' },
     { id:'s2', q:'Is there a venue PA system that can be independently switched off during the shoot?' },
     { id:'s3', q:'Is there an HVAC / air conditioning system that creates background noise?' },
     { id:'s4', q:'Can the HVAC be independently switched off during recording?' },
     { id:'s5', q:'Are there adjacent rooms, kitchens or bars that generate noise during the shoot?' },
-    { id:'s6', q:'Is the room affected by external noise — traffic, trains or aircraft flight path?' },
+    { id:'s6', q:'Is the room affected by external noise — traffic, trains or aircraft?' },
   ],
   yn_noiselimiter: [
     { id:'nl1', q:'Is a physical noise limiter device fitted at this venue?' },
@@ -795,20 +789,22 @@ const photoItems = [
 ];
 
 const photoLabels = {
-  room:      '01 - Room layout wide shot including ceiling',
-  items:     '02 - Items of interest bar poles doorways ramps obstacles',
-  audience:  '03 - Audience area and holding area',
-  fusebox:   '04 - Fuse box switchboard include circuit labels',
-  threeph:   '05 - 3-phase socket type size and condition',
-  rigging:   '06 - Rigging points grid include height reference',
-  gearentry: '07 - Gear entry points',
-  storage:   '08 - Storage areas',
-  truck:     '09 - Truck unloading area and access route',
-  dockarea:  '10 - Loading dock area',
-  hazards:   '11 - Identified hazard areas',
-  firstaid:  '12 - First aid kit and AED location',
-  sketch:    '13 - Sketch floor plan',
+  room:'01 - Room layout wide shot including ceiling',
+  items:'02 - Items of interest bar poles doorways ramps obstacles',
+  audience:'03 - Audience area and holding area',
+  fusebox:'04 - Fuse box switchboard include circuit labels',
+  threeph:'05 - 3-phase socket type size and condition',
+  rigging:'06 - Rigging points grid include height reference',
+  gearentry:'07 - Gear entry points',
+  storage:'08 - Storage areas',
+  truck:'09 - Truck unloading area and access route',
+  dockarea:'10 - Loading dock area',
+  hazards:'11 - Identified hazard areas',
+  firstaid:'12 - First aid kit and AED location',
+  sketch:'13 - Sketch floor plan',
 };
+
+const allPhotoIds = () => [...photoItems.map(p=>p.id), 'sketch'];
 
 // ── BUILD YES/NO ──────────────────────────────────────────────────────────────
 function buildYN(id, items) {
@@ -819,19 +815,19 @@ function buildYN(id, items) {
       <span class="yn-question">${item.q}</span>
       <div class="yn-btns">
         <button class="yn-btn" data-id="${item.id}" data-val="yes" onclick="toggleYN(this)">YES</button>
-        <button class="yn-btn" data-id="${item.id}" data-val="no"  onclick="toggleYN(this)">NO</button>
+        <button class="yn-btn" data-id="${item.id}" data-val="no" onclick="toggleYN(this)">NO</button>
       </div>
     </div></div>`).join('');
 }
 
 function toggleYN(btn) {
-  btn.closest('.yn-row').querySelectorAll('.yn-btn').forEach(b => b.classList.remove('yes','no'));
-  btn.classList.add(btn.dataset.val === 'yes' ? 'yes' : 'no');
+  btn.closest('.yn-row').querySelectorAll('.yn-btn').forEach(b=>b.classList.remove('yes','no'));
+  btn.classList.add(btn.dataset.val==='yes'?'yes':'no');
   updateProgress();
 }
 
 function buildHazards() {
-  document.getElementById('hazardGrid').innerHTML = hazardList.map((h,i) => `
+  document.getElementById('hazardGrid').innerHTML = hazardList.map((h,i)=>`
     <div class="hazard-item">
       <input type="checkbox" id="haz_${i}" onchange="updateProgress()">
       <label for="haz_${i}">${h}</label>
@@ -839,9 +835,10 @@ function buildHazards() {
 }
 
 function buildPhotos() {
-  document.getElementById('photoList').innerHTML = photoItems.map(p => `
+  document.getElementById('photoList').innerHTML = photoItems.map(p=>`
     <div class="photo-item">
       <div class="photo-header">
+        <img class="photo-thumb-small" id="th_${p.id}" src="" alt="${p.label}" onclick="openLightbox('${p.id}')">
         <span class="photo-label">${p.label}</span>
         <div class="photo-actions">
           <span class="photo-status" id="st_${p.id}">Pending</span>
@@ -853,82 +850,95 @@ function buildPhotos() {
           </button>
         </div>
       </div>
-      <div class="photo-preview" id="pv_${p.id}">
-        <img class="photo-thumb" id="th_${p.id}" src="" alt="${p.label}">
-        <button class="retake-btn" onclick="openCamera('${p.id}')">↺ Retake / Replace</button>
-      </div>
       <input type="file" class="hidden-file" id="cam_${p.id}" accept="image/*" capture="environment" onchange="handlePhoto(this,'${p.id}')">
       <input type="file" class="hidden-file" id="gal_${p.id}" accept="image/*" onchange="handlePhoto(this,'${p.id}')">
     </div>`).join('');
 }
 
-function openCamera(id) { document.getElementById('cam_' + id).click(); }
-function openGallery(id) { document.getElementById('gal_' + id).click(); }
+function openCamera(id) { document.getElementById('cam_'+id).click(); }
+function openGallery(id) { document.getElementById('gal_'+id).click(); }
 
 // ── PHOTO HANDLING ────────────────────────────────────────────────────────────
 window._photos = {};
 
 function handlePhoto(input, id) {
-  if (!input.files || !input.files[0]) return;
+  if (!input.files||!input.files[0]) return;
   const reader = new FileReader();
   reader.onload = e => {
     const img = new Image();
     img.onload = () => {
-      const MAX = 1600; let w = img.width, h = img.height;
-      if (w > MAX) { h = Math.round(h * MAX / w); w = MAX; }
-      const canvas = document.createElement('canvas');
-      canvas.width = w; canvas.height = h;
-      canvas.getContext('2d').drawImage(img, 0, 0, w, h);
-      canvas.toBlob(blob => {
-        window._photos[id] = { blob, label: id };
-        const dataUrl = canvas.toDataURL('image/jpeg', 0.85);
-        const th = document.getElementById('th_' + id);
-        const pv = document.getElementById('pv_' + id);
-        const st = document.getElementById('st_' + id);
-        if (th) th.src = dataUrl;
-        if (pv) pv.classList.add('visible');
-        if (st) { st.textContent = 'Done'; st.className = 'photo-status done'; }
+      const MAX=1600; let w=img.width, h=img.height;
+      if(w>MAX){h=Math.round(h*MAX/w);w=MAX;}
+      const canvas=document.createElement('canvas');
+      canvas.width=w; canvas.height=h;
+      canvas.getContext('2d').drawImage(img,0,0,w,h);
+      canvas.toBlob(blob=>{
+        window._photos[id]={blob, label:id};
+        const dataUrl=canvas.toDataURL('image/jpeg',0.85);
+        const th=document.getElementById('th_'+id);
+        const st=document.getElementById('st_'+id);
+        if(th){th.src=dataUrl; th.classList.add('visible');}
+        if(st){st.textContent='Done';st.className='photo-status done';}
         updateProgress();
-      }, 'image/jpeg', 0.85);
+        updateSitePhotosGrid();
+      },'image/jpeg',0.85);
     };
-    img.src = e.target.result;
+    img.src=e.target.result;
   };
   reader.readAsDataURL(input.files[0]);
 }
 
+// ── SITE PHOTOS GRID ──────────────────────────────────────────────────────────
+function updateSitePhotosGrid() {
+  const grid = document.getElementById('sitePhotosGrid');
+  if (!grid) return;
+  const ids = allPhotoIds();
+  const taken = ids.filter(id=>window._photos[id]&&window._photos[id].blob);
+  if (!taken.length) {
+    grid.innerHTML = '<div class="site-photo-empty"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#8a9bb5" stroke-width="1.5"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg><span>No photos taken yet</span></div>';
+    return;
+  }
+  grid.innerHTML = taken.map(id=>{
+    const url = URL.createObjectURL(window._photos[id].blob);
+    const item = photoItems.find(p=>p.id===id);
+    const label = item ? item.label : (id==='sketch'?'Sketch / Floor Plan':id);
+    return `<div class="site-photo-cell" onclick="openLightbox('${id}')">
+      <img src="${url}" alt="${label}" onload="URL.revokeObjectURL(this.src)">
+      <div class="site-photo-cell-label">${label}</div>
+    </div>`;
+  }).join('');
+}
+
 // ── MAP ───────────────────────────────────────────────────────────────────────
 function loadMap() {
-  const q = document.getElementById('mapSearch').value.trim();
-  if (!q) return;
-  const enc = encodeURIComponent(q);
-  document.getElementById('mapFrame').src = 'https://maps.google.com/maps?q=' + enc + '&output=embed&z=16';
-  document.getElementById('mapFrame').style.display = 'block';
-  document.getElementById('mapPlaceholder').style.display = 'none';
-  document.getElementById('mapLinks').style.display = 'flex';
-  document.getElementById('linkApple').href  = 'https://maps.apple.com/?q=' + enc;
-  document.getElementById('linkGoogle').href = 'https://www.google.com/maps/search/?api=1&query=' + enc;
-  document.getElementById('linkW3W').href    = 'https://what3words.com/search?query=' + enc;
+  const q=document.getElementById('mapSearch').value.trim(); if(!q) return;
+  const enc=encodeURIComponent(q);
+  document.getElementById('mapFrame').src='https://maps.google.com/maps?q='+enc+'&output=embed&z=16';
+  document.getElementById('mapFrame').style.display='block';
+  document.getElementById('mapPlaceholder').style.display='none';
+  document.getElementById('mapLinks').style.display='flex';
+  document.getElementById('linkApple').href='https://maps.apple.com/?q='+enc;
+  document.getElementById('linkGoogle').href='https://www.google.com/maps/search/?api=1&query='+enc;
+  document.getElementById('linkW3W').href='https://what3words.com/search?query='+enc;
 }
 
 // ── PROGRESS ──────────────────────────────────────────────────────────────────
 function updateProgress() {
-  const answered     = document.querySelectorAll('.yn-btn.yes, .yn-btn.no').length;
-  const total_yn     = document.querySelectorAll('.yn-item').length;
-  const done_photos  = document.querySelectorAll('.photo-status.done').length;
-  const total_photos = document.querySelectorAll('.photo-status').length;
-  const total = total_yn + total_photos;
-  const done  = answered + done_photos;
-  const pct   = total > 0 ? Math.round(done / total * 100) : 0;
-  document.getElementById('progressFill').style.width = pct + '%';
-  document.getElementById('progressPct').textContent = pct + '%';
+  const answered=document.querySelectorAll('.yn-btn.yes,.yn-btn.no').length;
+  const total_yn=document.querySelectorAll('.yn-item').length;
+  const done_photos=document.querySelectorAll('.photo-status.done').length;
+  const total_photos=document.querySelectorAll('.photo-status').length;
+  const total=total_yn+total_photos; const done=answered+done_photos;
+  const pct=total>0?Math.round(done/total*100):0;
+  document.getElementById('progressFill').style.width=pct+'%';
+  document.getElementById('progressPct').textContent=pct+'%';
 }
 
 // ── COLLECT / RESTORE STATE ───────────────────────────────────────────────────
 const allFieldIds = [
   'f_prodName','f_txDate','f_recceDate','f_officer','f_venueName',
   'f_address','f_suburb','f_state','f_contact','f_phone',
-  'f_techContact','f_techPhone',
-  'f_gps','f_w3w','f_accessNotes',
+  'f_techContact','f_techPhone','f_gps','f_w3w','f_accessNotes',
   'f_occupancy','f_bumpIn','f_ceilingH','f_venueType',
   'f_ssid','f_wifiPw','f_signal','f_speed','f_ispContact',
   'f_noiseCurfew','f_noiseCurfewContact','f_limiterDb','f_limiterContact',
@@ -946,133 +956,117 @@ const allFieldIds = [
 ];
 
 function collectState() {
-  const fields = {};
-  allFieldIds.forEach(id => { const el = document.getElementById(id); if (el) fields[id] = el.value; });
-  const yn = {};
-  document.querySelectorAll('.yn-btn.yes, .yn-btn.no').forEach(btn => { yn[btn.dataset.id] = btn.dataset.val; });
-  const haz = [];
-  hazardList.forEach((h,i) => { const cb = document.getElementById('haz_'+i); if (cb && cb.checked) haz.push(i); });
-  return { fields, yn, haz };
+  const fields={};
+  allFieldIds.forEach(id=>{const el=document.getElementById(id);if(el) fields[id]=el.value;});
+  const yn={};
+  document.querySelectorAll('.yn-btn.yes,.yn-btn.no').forEach(btn=>{yn[btn.dataset.id]=btn.dataset.val;});
+  const haz=[];
+  hazardList.forEach((h,i)=>{const cb=document.getElementById('haz_'+i);if(cb&&cb.checked) haz.push(i);});
+  return {fields,yn,haz};
 }
 
 function restoreState(state) {
-  if (!state) return;
-  Object.entries(state.fields || {}).forEach(([id,val]) => { const el = document.getElementById(id); if (el) el.value = val; });
-  document.querySelectorAll('.yn-btn').forEach(btn => {
+  if(!state) return;
+  Object.entries(state.fields||{}).forEach(([id,val])=>{const el=document.getElementById(id);if(el) el.value=val;});
+  document.querySelectorAll('.yn-btn').forEach(btn=>{
     btn.classList.remove('yes','no');
-    if (state.yn && state.yn[btn.dataset.id] === btn.dataset.val) btn.classList.add(btn.dataset.val === 'yes' ? 'yes' : 'no');
+    if(state.yn&&state.yn[btn.dataset.id]===btn.dataset.val) btn.classList.add(btn.dataset.val==='yes'?'yes':'no');
   });
-  (state.haz || []).forEach(i => { const cb = document.getElementById('haz_'+i); if (cb) cb.checked = true; });
-  if (state.fields && state.fields.mapSearch) { document.getElementById('mapSearch').value = state.fields.mapSearch; loadMap(); }
+  (state.haz||[]).forEach(i=>{const cb=document.getElementById('haz_'+i);if(cb) cb.checked=true;});
+  if(state.fields&&state.fields.mapSearch){document.getElementById('mapSearch').value=state.fields.mapSearch;loadMap();}
   updateProgress();
 }
 
 // ── INDEXEDDB ─────────────────────────────────────────────────────────────────
-const DB_NAME = 'RecceDB', DB_VER = 1;
-let db = null;
+const DB_NAME='RecceDB', DB_VER=1;
+let db=null;
 function openDB() {
-  return new Promise((resolve, reject) => {
-    if (db) { resolve(db); return; }
-    const req = indexedDB.open(DB_NAME, DB_VER);
-    req.onupgradeneeded = e => {
-      const d = e.target.result;
-      if (!d.objectStoreNames.contains('surveys')) d.createObjectStore('surveys', { keyPath: 'key' });
-      if (!d.objectStoreNames.contains('photos'))  d.createObjectStore('photos',  { keyPath: 'id' });
+  return new Promise((resolve,reject)=>{
+    if(db){resolve(db);return;}
+    const req=indexedDB.open(DB_NAME,DB_VER);
+    req.onupgradeneeded=e=>{
+      const d=e.target.result;
+      if(!d.objectStoreNames.contains('surveys')) d.createObjectStore('surveys',{keyPath:'key'});
+      if(!d.objectStoreNames.contains('photos')) d.createObjectStore('photos',{keyPath:'id'});
     };
-    req.onsuccess = e => { db = e.target.result; resolve(db); };
-    req.onerror   = () => reject(req.error);
+    req.onsuccess=e=>{db=e.target.result;resolve(db);};
+    req.onerror=()=>reject(req.error);
   });
 }
-async function dbPut(store, obj) {
-  const d = await openDB();
-  return new Promise((res, rej) => { const tx = d.transaction(store,'readwrite'); tx.objectStore(store).put(obj).onsuccess = res; tx.onerror = () => rej(tx.error); });
-}
-async function dbGet(store, key) {
-  const d = await openDB();
-  return new Promise((res, rej) => { const tx = d.transaction(store,'readonly'); const r = tx.objectStore(store).get(key); r.onsuccess = () => res(r.result); r.onerror = () => rej(r.error); });
-}
-async function dbGetAll(store) {
-  const d = await openDB();
-  return new Promise((res, rej) => { const tx = d.transaction(store,'readonly'); const r = tx.objectStore(store).getAll(); r.onsuccess = () => res(r.result); r.onerror = () => rej(r.error); });
-}
-async function dbDelete(store, key) {
-  const d = await openDB();
-  return new Promise((res, rej) => { const tx = d.transaction(store,'readwrite'); tx.objectStore(store).delete(key).onsuccess = res; tx.onerror = () => rej(tx.error); });
-}
+async function dbPut(store,obj){const d=await openDB();return new Promise((res,rej)=>{const tx=d.transaction(store,'readwrite');tx.objectStore(store).put(obj).onsuccess=res;tx.onerror=()=>rej(tx.error);});}
+async function dbGet(store,key){const d=await openDB();return new Promise((res,rej)=>{const tx=d.transaction(store,'readonly');const r=tx.objectStore(store).get(key);r.onsuccess=()=>res(r.result);r.onerror=()=>rej(r.error);});}
+async function dbGetAll(store){const d=await openDB();return new Promise((res,rej)=>{const tx=d.transaction(store,'readonly');const r=tx.objectStore(store).getAll();r.onsuccess=()=>res(r.result);r.onerror=()=>rej(r.error);});}
+async function dbDelete(store,key){const d=await openDB();return new Promise((res,rej)=>{const tx=d.transaction(store,'readwrite');tx.objectStore(store).delete(key).onsuccess=res;tx.onerror=()=>rej(tx.error);});}
 
 // ── SAVE / LOAD / DELETE ──────────────────────────────────────────────────────
-const allPhotoIds = () => [...photoItems.map(p=>p.id), 'sketch'];
-
 async function saveSurvey() {
-  const name = document.getElementById('saveName').value.trim() || document.getElementById('f_prodName').value.trim() || 'Untitled';
-  const now  = new Date();
-  const key  = name + ' — ' + now.toLocaleDateString('en-AU',{day:'2-digit',month:'short',year:'numeric'}) + ' ' + now.toLocaleTimeString('en-AU',{hour:'2-digit',minute:'2-digit'});
+  const name=document.getElementById('saveName').value.trim()||document.getElementById('f_prodName').value.trim()||'Untitled';
+  const now=new Date();
+  const key=name+' — '+now.toLocaleDateString('en-AU',{day:'2-digit',month:'short',year:'numeric'})+' '+now.toLocaleTimeString('en-AU',{hour:'2-digit',minute:'2-digit'});
   try {
-    await dbPut('surveys', { key, name, date: now.toLocaleDateString('en-AU',{day:'2-digit',month:'short',year:'numeric'}), time: now.toLocaleTimeString('en-AU',{hour:'2-digit',minute:'2-digit'}), state: collectState() });
-    for (const pid of allPhotoIds()) {
-      if (window._photos[pid] && window._photos[pid].blob) {
-        await dbPut('photos', { id: key+'__'+pid, surveyKey: key, photoId: pid, blob: window._photos[pid].blob, label: photoItems.find(p=>p.id===pid)?.label || pid });
+    await dbPut('surveys',{key,name,date:now.toLocaleDateString('en-AU',{day:'2-digit',month:'short',year:'numeric'}),time:now.toLocaleTimeString('en-AU',{hour:'2-digit',minute:'2-digit'}),state:collectState()});
+    for(const pid of allPhotoIds()){
+      if(window._photos[pid]&&window._photos[pid].blob){
+        await dbPut('photos',{id:key+'__'+pid,surveyKey:key,photoId:pid,blob:window._photos[pid].blob,label:photoItems.find(p=>p.id===pid)?.label||pid});
       }
     }
     renderSaved(key);
-    const btn = document.getElementById('btnSave');
-    const orig = btn.textContent; btn.textContent = '✓ Saved!'; btn.style.background='linear-gradient(135deg,#27ae60,#2ecc71)';
-    setTimeout(()=>{ btn.textContent=orig; btn.style.background=''; }, 2000);
-  } catch(e) { alert('Could not save: ' + e.message); }
+  } catch(e){alert('Could not save: '+e.message);}
 }
 
 async function loadSurveyByKey(key) {
-  const record = await dbGet('surveys', key);
-  if (!record) return;
-  if (!confirm('Load "' + record.name + '"? This replaces everything on screen.')) return;
+  const record=await dbGet('surveys',key);
+  if(!record) return;
+  if(!confirm('Load "'+record.name+'"? This replaces everything on screen.')) return;
   clearAll();
   restoreState(record.state);
-  document.getElementById('saveName').value = record.name;
-  for (const pid of allPhotoIds()) {
-    const pr = await dbGet('photos', key+'__'+pid);
-    if (pr && pr.blob) {
-      window._photos[pid] = { blob: pr.blob, label: pid };
-      const url = URL.createObjectURL(pr.blob);
-      const th = document.getElementById('th_'+pid); const pv = document.getElementById('pv_'+pid); const st = document.getElementById('st_'+pid);
-      if (th) th.src = url;
-      if (pv) pv.classList.add('visible');
-      if (st) { st.textContent = 'Done'; st.className = 'photo-status done'; }
+  document.getElementById('saveName').value=record.name;
+  for(const pid of allPhotoIds()){
+    const pr=await dbGet('photos',key+'__'+pid);
+    if(pr&&pr.blob){
+      window._photos[pid]={blob:pr.blob,label:pid};
+      const url=URL.createObjectURL(pr.blob);
+      const th=document.getElementById('th_'+pid);
+      const st=document.getElementById('st_'+pid);
+      if(th){th.src=url;th.classList.add('visible');}
+      if(st){st.textContent='Done';st.className='photo-status done';}
     }
   }
-  window._activeKey = key;
+  window._activeKey=key;
   renderSaved(key);
-  document.getElementById('loaderList').style.display = 'none';
-  window.scrollTo({top:0, behavior:'smooth'});
+  document.getElementById('loaderList').style.display='none';
   updateProgress();
+  updateSitePhotosGrid();
+  window.scrollTo({top:0,behavior:'smooth'});
 }
 
 async function deleteSurveyByKey(key) {
-  if (!confirm('Delete this survey? This cannot be undone.')) return;
-  for (const pid of allPhotoIds()) await dbDelete('photos', key+'__'+pid);
-  await dbDelete('surveys', key);
-  if (window._activeKey === key) window._activeKey = null;
+  if(!confirm('Delete this survey? This cannot be undone.')) return;
+  for(const pid of allPhotoIds()) await dbDelete('photos',key+'__'+pid);
+  await dbDelete('surveys',key);
+  if(window._activeKey===key) window._activeKey=null;
   renderSaved(window._activeKey);
 }
 
 async function renderSaved(highlightKey) {
-  const all = await dbGetAll('surveys');
-  all.sort((a,b) => b.key.localeCompare(a.key));
-  window._savedKeys = all.map(s => s.key);
-  const noMsg = '<div style="color:var(--grey);font-size:0.85rem;padding:8px 0;">No saved surveys yet.</div>';
-  const el = document.getElementById('savedList'), loader = document.getElementById('loaderList');
-  if (!all.length) { if(el) el.innerHTML=noMsg; if(loader) loader.innerHTML=noMsg; return; }
-  const rows = all.map((s,i) => `
+  const all=await dbGetAll('surveys');
+  all.sort((a,b)=>b.key.localeCompare(a.key));
+  window._savedKeys=all.map(s=>s.key);
+  const noMsg='<div style="color:var(--grey);font-size:0.85rem;padding:8px 0;">No saved surveys yet.</div>';
+  const el=document.getElementById('savedList'),loader=document.getElementById('loaderList');
+  if(!all.length){if(el)el.innerHTML=noMsg;if(loader)loader.innerHTML=noMsg;return;}
+  const rows=all.map((s,i)=>`
     <div class="saved-row${s.key===highlightKey?' active':''}">
       <div class="saved-info"><span class="saved-name">${s.name}</span><span class="saved-meta">${s.date} &nbsp;${s.time}</span></div>
       <div class="saved-actions">
         <button class="saved-btn load" onclick="loadSurveyByIndex(${i})">Load</button>
-        <button class="saved-btn del"  onclick="deleteSurveyByIndex(${i})">Delete</button>
+        <button class="saved-btn del" onclick="deleteSurveyByIndex(${i})">Delete</button>
       </div>
     </div>`).join('');
-  if(el) el.innerHTML=rows; if(loader) loader.innerHTML=rows;
+  if(el)el.innerHTML=rows;if(loader)loader.innerHTML=rows;
 }
-function loadSurveyByIndex(i)   { const k=window._savedKeys&&window._savedKeys[i]; if(k) loadSurveyByKey(k); }
-function deleteSurveyByIndex(i) { const k=window._savedKeys&&window._savedKeys[i]; if(k) deleteSurveyByKey(k); }
+function loadSurveyByIndex(i){const k=window._savedKeys&&window._savedKeys[i];if(k)loadSurveyByKey(k);}
+function deleteSurveyByIndex(i){const k=window._savedKeys&&window._savedKeys[i];if(k)deleteSurveyByKey(k);}
 
 // ── CLEAR ALL ─────────────────────────────────────────────────────────────────
 function clearAll() {
@@ -1081,137 +1075,242 @@ function clearAll() {
   document.querySelectorAll('.yn-btn').forEach(b=>b.classList.remove('yes','no'));
   document.querySelectorAll('.hazard-item input[type=checkbox]').forEach(cb=>cb.checked=false);
   window._photos={};
-  document.querySelectorAll('.photo-preview').forEach(pv=>pv.classList.remove('visible'));
-  document.querySelectorAll('.photo-thumb').forEach(th=>th.src='');
+  document.querySelectorAll('.photo-thumb-small').forEach(th=>{th.src='';th.classList.remove('visible');});
   document.querySelectorAll('.photo-status').forEach(st=>{st.textContent='Pending';st.className='photo-status';});
   document.getElementById('mapFrame').style.display='none';
   document.getElementById('mapPlaceholder').style.display='flex';
   document.getElementById('mapLinks').style.display='none';
-  document.getElementById('iosSharePanel').style.display='none';
-  window._pendingZipBlob=null;
   document.getElementById('f_recceDate').valueAsDate=new Date();
+  updateSitePhotosGrid();
 }
 
 function newSurvey() {
-  if (document.getElementById('f_prodName').value.trim()) { if (!confirm('Start a new survey? Unsaved changes will be lost.')) return; }
-  clearAll(); window._activeKey=null; renderSaved(null); updateProgress(); window.scrollTo({top:0,behavior:'smooth'});
+  if(document.getElementById('f_prodName').value.trim()){if(!confirm('Start a new survey? Unsaved changes will be lost.')) return;}
+  clearAll();window._activeKey=null;renderSaved(null);updateProgress();window.scrollTo({top:0,behavior:'smooth'});
 }
 
 function toggleLoader() {
-  const list=document.getElementById('loaderList'), btn=document.getElementById('btnLoadSurvey');
+  const list=document.getElementById('loaderList'),btn=document.getElementById('btnLoadSurvey');
   const open=list.style.display==='none'||list.style.display==='';
-  list.style.display=open?'block':'none'; btn.classList.toggle('active',open);
+  list.style.display=open?'block':'none';btn.classList.toggle('active',open);
   if(open) renderSaved(window._activeKey);
 }
 
-// ── ZIP EXPORT ────────────────────────────────────────────────────────────────
-window._pendingZipBlob=null; window._pendingZipName=null;
+// ── EXPORT SURVEY (ZIP) ───────────────────────────────────────────────────────
+window._pendingZipBlob=null;window._pendingZipName=null;
 
-async function exportZip() {
-  const name  = document.getElementById('saveName').value.trim() || document.getElementById('f_prodName').value.trim() || 'Recce Survey';
-  const dated = document.getElementById('f_recceDate').value || new Date().toISOString().slice(0,10);
-  const fname = name.replace(/[^a-zA-Z0-9 _-]/g,'').trim() + ' - ' + dated;
-  const zip   = new JSZip();
-  zip.file('survey.json', JSON.stringify({ _v:2, name, date:dated, exported:new Date().toISOString(), state:collectState() }, null, 2));
-  const folder = zip.folder('photos');
-  for (const pid of allPhotoIds()) {
-    if (window._photos[pid] && window._photos[pid].blob) folder.file((photoLabels[pid]||pid)+'.jpg', window._photos[pid].blob);
+async function exportSurvey() {
+  const name=document.getElementById('saveName').value.trim()||document.getElementById('f_prodName').value.trim()||'Recce Survey';
+  const dated=document.getElementById('f_recceDate').value||new Date().toISOString().slice(0,10);
+  const fname=name.replace(/[^a-zA-Z0-9 _-]/g,'').trim()+' - '+dated;
+  const zip=new JSZip();
+  zip.file('survey.json',JSON.stringify({_v:2,name,date:dated,exported:new Date().toISOString(),state:collectState()},null,2));
+  const folder=zip.folder('photos');
+  for(const pid of allPhotoIds()){
+    if(window._photos[pid]&&window._photos[pid].blob) folder.file((photoLabels[pid]||pid)+'.jpg',window._photos[pid].blob);
   }
-  const zipBlob = await zip.generateAsync({ type:'blob', compression:'DEFLATE', compressionOptions:{level:6} });
-  if (isSafari) {
-    window._pendingZipBlob=zipBlob; window._pendingZipName=fname+'.zip';
-    const panel=document.getElementById('iosSharePanel'); panel.style.display='block'; panel.scrollIntoView({behavior:'smooth',block:'nearest'});
+  const zipBlob=await zip.generateAsync({type:'blob',compression:'DEFLATE',compressionOptions:{level:6}});
+  if(isSafari){
+    window._pendingZipBlob=zipBlob;window._pendingZipName=fname+'.zip';
+    const file=new File([zipBlob],fname+'.zip',{type:'application/zip'});
+    if(navigator.share&&navigator.canShare&&navigator.canShare({files:[file]})){
+      navigator.share({files:[file],title:fname+'.zip'});
+    } else {
+      const url=URL.createObjectURL(zipBlob);window.open(url,'_blank');
+      setTimeout(()=>URL.revokeObjectURL(url),15000);
+      alert('Tap Share in your browser, then Save to Files.');
+    }
   } else {
-    const url=URL.createObjectURL(zipBlob), a=document.createElement('a');
-    a.href=url; a.download=fname+'.zip'; document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    const url=URL.createObjectURL(zipBlob),a=document.createElement('a');
+    a.href=url;a.download=fname+'.zip';document.body.appendChild(a);a.click();document.body.removeChild(a);
     setTimeout(()=>URL.revokeObjectURL(url),5000);
   }
 }
 
-function iosShare() {
-  if (!window._pendingZipBlob) return;
-  const file=new File([window._pendingZipBlob], window._pendingZipName, {type:'application/zip'});
-  if (navigator.share && navigator.canShare && navigator.canShare({files:[file]})) {
-    navigator.share({files:[file], title:window._pendingZipName});
-  } else {
-    const url=URL.createObjectURL(window._pendingZipBlob);
-    window.open(url,'_blank'); setTimeout(()=>URL.revokeObjectURL(url),15000);
-    alert('Tap Share in your browser, then Save to Files.');
+// ── GENERATE REPORT (print dialog) ───────────────────────────────────────────
+async function generateReport() {
+  const name=document.getElementById('f_prodName').value||'';
+  const venue=document.getElementById('f_venueName').value||'Venue';
+  const dated=document.getElementById('f_recceDate').value||new Date().toISOString().slice(0,10);
+  const officer=document.getElementById('f_officer').value||'';
+  const state=collectState();
+  const fields=state.fields||{};
+  const yn=state.yn||{};
+
+  // Convert photos to data URLs
+  const dataUrls={};
+  for(const pid of allPhotoIds()){
+    if(window._photos[pid]&&window._photos[pid].blob){
+      dataUrls[pid]=await new Promise(resolve=>{const r=new FileReader();r.onload=e=>resolve(e.target.result);r.readAsDataURL(window._photos[pid].blob);});
+    }
   }
+
+  const labelFor=id=>photoItems.find(p=>p.id===id)?.label||(id==='sketch'?'Sketch / Floor Plan':id);
+  const ynLabel=id=>yn[id]==='yes'?'YES':yn[id]==='no'?'NO':'—';
+
+  const photoRows=[];
+  const takenIds=allPhotoIds().filter(id=>dataUrls[id]);
+  for(let i=0;i<takenIds.length;i+=2){
+    const a=takenIds[i],b=takenIds[i+1];
+    photoRows.push(`<tr>
+      <td style="width:50%;padding:8px;vertical-align:top;"><img src="${dataUrls[a]}" style="width:100%;border-radius:4px;display:block;"><p style="margin-top:5px;font-size:11px;font-weight:600;color:#555;">${labelFor(a)}</p></td>
+      ${b?`<td style="width:50%;padding:8px;vertical-align:top;"><img src="${dataUrls[b]}" style="width:100%;border-radius:4px;display:block;"><p style="margin-top:5px;font-size:11px;font-weight:600;color:#555;">${labelFor(b)}</p></td>`:'<td></td>'}
+    </tr>`);
+  }
+
+  const fv=(id,fallback='—')=>fields[id]||fallback;
+
+  const html=`<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Site Survey — ${venue}</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#1a1a1a;background:white;padding:0;}
+    .page{max-width:800px;margin:0 auto;padding:30px 40px;}
+    .header{background:#0a1628;color:white;padding:24px 40px;display:flex;align-items:center;gap:20px;}
+    .header h1{font-size:22px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;}
+    .header p{font-size:11px;color:#c8a84b;letter-spacing:0.1em;text-transform:uppercase;margin-top:4px;}
+    .meta{background:#f5f5f5;padding:14px 40px;font-size:12px;color:#555;display:flex;gap:30px;flex-wrap:wrap;border-bottom:2px solid #c8a84b;}
+    .meta span strong{color:#1a1a1a;}
+    h2{font-size:13px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#0a1628;margin:20px 0 8px;padding-bottom:4px;border-bottom:2px solid #c8a84b;}
+    .field-row{display:flex;gap:6px;padding:5px 0;border-bottom:1px solid #eee;font-size:12px;}
+    .field-row:last-child{border-bottom:none;}
+    .field-key{color:#666;min-width:200px;flex-shrink:0;}
+    .field-val{color:#1a1a1a;font-weight:500;}
+    .yn-table{width:100%;border-collapse:collapse;font-size:12px;margin-bottom:8px;}
+    .yn-table td{padding:5px 8px;border-bottom:1px solid #eee;}
+    .yn-table td:last-child{width:50px;text-align:center;font-weight:700;}
+    .yn-yes{color:#27ae60;} .yn-no{color:#c0392b;} .yn-na{color:#aaa;}
+    .photo-section{margin-top:20px;}
+    table{width:100%;border-collapse:collapse;}
+    .print-btn{background:#0a1628;color:white;border:none;padding:10px 24px;border-radius:4px;font-size:13px;cursor:pointer;margin:20px 40px;}
+    @media print{.print-btn{display:none;}.page{padding:20px;}}
+  </style></head><body>
+  <div class="header">
+    <div>
+      <h1>Site Survey — Tech Recce</h1>
+      <p>Recce Survey List &nbsp;|&nbsp; Patrice Roblin</p>
+    </div>
+  </div>
+  <div class="meta">
+    <span><strong>Production:</strong> ${fv('f_prodName')}</span>
+    <span><strong>Venue:</strong> ${fv('f_venueName')}</span>
+    <span><strong>Date:</strong> ${fv('f_recceDate')}</span>
+    <span><strong>Officer:</strong> ${fv('f_officer')}</span>
+  </div>
+  <button class="print-btn" onclick="window.print()">Print / Save as PDF</button>
+  <div class="page">
+
+  <h2>Job Details</h2>
+  ${[['Production / Show Name','f_prodName'],['TX Date','f_txDate'],['Recce Date','f_recceDate'],['Recce Officer','f_officer'],['Venue Name','f_venueName'],['Address','f_address'],['Suburb','f_suburb'],['State','f_state'],['Booking Contact','f_contact'],['Booking Phone','f_phone'],['Tech Contact (On Day)','f_techContact'],['Tech Contact Phone','f_techPhone']].map(([k,v])=>`<div class="field-row"><span class="field-key">${k}</span><span class="field-val">${fv(v)}</span></div>`).join('')}
+
+  <h2>Venue</h2>
+  ${[['Ceiling Height','f_ceilingH'],['Occupancy','f_occupancy'],['Bump-in Window','f_bumpIn'],['Venue Type','f_venueType']].map(([k,v])=>`<div class="field-row"><span class="field-key">${k}</span><span class="field-val">${fv(v)}</span></div>`).join('')}
+  <table class="yn-table">${ynSections.yn_venue.map(q=>`<tr><td>${q.q}</td><td class="yn-${yn[q.id]||'na'}">${ynLabel(q.id)}</td></tr>`).join('')}</table>
+  ${fv('n_venue','')!==''?`<div class="field-row"><span class="field-key">Notes</span><span class="field-val">${fv('n_venue')}</span></div>`:''}
+
+  <h2>Internet &amp; Connectivity</h2>
+  ${[['WiFi SSID','f_ssid'],['WiFi Password','f_wifiPw'],['Signal Strength','f_signal'],['Speed Test','f_speed'],['ISP Contact','f_ispContact']].map(([k,v])=>`<div class="field-row"><span class="field-key">${k}</span><span class="field-val">${fv(v)}</span></div>`).join('')}
+  <table class="yn-table">${ynSections.yn_internet.map(q=>`<tr><td>${q.q}</td><td class="yn-${yn[q.id]||'na'}">${ynLabel(q.id)}</td></tr>`).join('')}</table>
+
+  <h2>Sound</h2>
+  <table class="yn-table">${ynSections.yn_sound.map(q=>`<tr><td>${q.q}</td><td class="yn-${yn[q.id]||'na'}">${ynLabel(q.id)}</td></tr>`).join('')}</table>
+  <div style="margin-top:8px;font-size:11px;font-weight:700;color:#0a1628;text-transform:uppercase;letter-spacing:0.08em;">Noise Limiter</div>
+  <table class="yn-table">${ynSections.yn_noiselimiter.map(q=>`<tr><td>${q.q}</td><td class="yn-${yn[q.id]||'na'}">${ynLabel(q.id)}</td></tr>`).join('')}</table>
+  ${[['Noise Curfew Time','f_noiseCurfew'],['Curfew Contact','f_noiseCurfewContact'],['Limiter Threshold','f_limiterDb'],['Limiter Contact','f_limiterContact']].map(([k,v])=>`<div class="field-row"><span class="field-key">${k}</span><span class="field-val">${fv(v)}</span></div>`).join('')}
+  ${fv('n_sound','')!==''?`<div class="field-row"><span class="field-key">Notes</span><span class="field-val">${fv('n_sound')}</span></div>`:''}
+
+  <h2>Light</h2>
+  <table class="yn-table">${ynSections.yn_light.map(q=>`<tr><td>${q.q}</td><td class="yn-${yn[q.id]||'na'}">${ynLabel(q.id)}</td></tr>`).join('')}</table>
+  ${fv('n_light','')!==''?`<div class="field-row"><span class="field-key">Notes</span><span class="field-val">${fv('n_light')}</span></div>`:''}
+
+  <h2>House Lighting &amp; Sound System</h2>
+  <table class="yn-table">${ynSections.yn_housesystem.map(q=>`<tr><td>${q.q}</td><td class="yn-${yn[q.id]||'na'}">${ynLabel(q.id)}</td></tr>`).join('')}</table>
+  ${[['House LX System','f_houseLx'],['DMX Patch','f_dmxPatch'],['House PA','f_housePA'],['Audio Patch','f_audioPatch']].map(([k,v])=>`<div class="field-row"><span class="field-key">${k}</span><span class="field-val">${fv(v)}</span></div>`).join('')}
+
+  <h2>Power</h2>
+  <table class="yn-table">${ynSections.yn_power.map(q=>`<tr><td>${q.q}</td><td class="yn-${yn[q.id]||'na'}">${ynLabel(q.id)}</td></tr>`).join('')}</table>
+  ${[['Fuse Box Location','f_fuseLocation'],['GPOs in Room','f_gpos']].map(([k,v])=>`<div class="field-row"><span class="field-key">${k}</span><span class="field-val">${fv(v)}</span></div>`).join('')}
+
+  <h2>Access &amp; Storage</h2>
+  <table class="yn-table">${[...ynSections.yn_access,...ynSections.yn_storage].map(q=>`<tr><td>${q.q}</td><td class="yn-${yn[q.id]||'na'}">${ynLabel(q.id)}</td></tr>`).join('')}</table>
+  ${[['Stair Flights','f_stairs'],['Lift Dims','f_liftDims'],['Lift Capacity','f_liftKg'],['Corridor Width','f_corridorW']].map(([k,v])=>`<div class="field-row"><span class="field-key">${k}</span><span class="field-val">${fv(v)}</span></div>`).join('')}
+  ${fv('n_accessstorage','')!==''?`<div class="field-row"><span class="field-key">Notes</span><span class="field-val">${fv('n_accessstorage')}</span></div>`:''}
+
+  <h2>Truck &amp; Loading</h2>
+  <table class="yn-table">${ynSections.yn_truck.map(q=>`<tr><td>${q.q}</td><td class="yn-${yn[q.id]||'na'}">${ynLabel(q.id)}</td></tr>`).join('')}</table>
+  ${[['Truck Distance','f_truckDist'],['Clearance Height','f_truckClear'],['Dock Hours','f_dockHours'],['Dock Contact','f_dockContact']].map(([k,v])=>`<div class="field-row"><span class="field-key">${k}</span><span class="field-val">${fv(v)}</span></div>`).join('')}
+
+  <h2>Hazards</h2>
+  ${hazardList.map((h,i)=>state.haz&&state.haz.includes(i)?`<div class="field-row"><span class="field-val" style="color:#c0392b;">&#10003; ${h}</span></div>`:'').join('')||'<div class="field-row"><span class="field-val" style="color:#aaa;">No hazards flagged</span></div>'}
+  ${fv('n_hazards','')!==''?`<div class="field-row"><span class="field-key">Notes</span><span class="field-val">${fv('n_hazards')}</span></div>`:''}
+
+  <h2>First Aid &amp; Emergency</h2>
+  <table class="yn-table">${ynSections.yn_firstaid.map(q=>`<tr><td>${q.q}</td><td class="yn-${yn[q.id]||'na'}">${ynLabel(q.id)}</td></tr>`).join('')}</table>
+  ${[['First Aid Kit','f_firstAidKit'],['AED Location','f_aed'],['Nearest Hospital','f_hospital'],['Muster Point','f_muster']].map(([k,v])=>`<div class="field-row"><span class="field-key">${k}</span><span class="field-val">${fv(v)}</span></div>`).join('')}
+
+  <h2>Risk Assessment &amp; Duty of Care</h2>
+  <table class="yn-table">${ynSections.yn_risk.map(q=>`<tr><td>${q.q}</td><td class="yn-${yn[q.id]||'na'}">${ynLabel(q.id)}</td></tr>`).join('')}</table>
+  ${[['RA Document Ref','f_riskDoc'],['WHS Contact','f_whsContact']].map(([k,v])=>`<div class="field-row"><span class="field-key">${k}</span><span class="field-val">${fv(v)}</span></div>`).join('')}
+  ${fv('n_risk','')!==''?`<div class="field-row"><span class="field-key">Notes</span><span class="field-val">${fv('n_risk')}</span></div>`:''}
+
+  <h2>Sketch &amp; Floor Plan</h2>
+  ${[['Room Length','f_roomLength'],['Room Width','f_roomWidth'],['Ceiling Height','f_ceilingH2']].map(([k,v])=>`<div class="field-row"><span class="field-key">${k}</span><span class="field-val">${fv(v)}</span></div>`).join('')}
+
+  ${takenIds.length?`<h2>Site Photos</h2><div class="photo-section"><table>${photoRows.join('')}</table></div>`:''}
+
+  </div></body></html>`;
+
+  const blob=new Blob([html],{type:'text/html'});
+  const url=URL.createObjectURL(blob);
+  window.open(url,'_blank');
+  setTimeout(()=>URL.revokeObjectURL(url),30000);
 }
 
 // ── IMPORT ────────────────────────────────────────────────────────────────────
 async function importFile(input) {
-  if (!input.files||!input.files[0]) return;
+  if(!input.files||!input.files[0]) return;
   const file=input.files[0];
-  if (file.name.endsWith('.zip')) { await importZip(file); } else { importJson(file); }
+  if(file.name.endsWith('.zip')){await importZip(file);}else{importJson(file);}
   input.value='';
 }
 
 async function importZip(file) {
   try {
     const zip=await JSZip.loadAsync(file);
-    const jf=zip.file('survey.json'); if(!jf){alert('No survey.json found in ZIP.');return;}
+    const jf=zip.file('survey.json');if(!jf){alert('No survey.json found in ZIP.');return;}
     const data=JSON.parse(await jf.async('string'));
     if(!data.state) throw new Error('bad');
     if(!confirm('Load "' + (data.name||'Survey') + '"? This replaces everything on screen.')) return;
-    clearAll(); restoreState(data.state);
+    clearAll();restoreState(data.state);
     if(data.name) document.getElementById('saveName').value=data.name;
-    for (const pid of allPhotoIds()) {
-      const label=photoLabels[pid]||pid;
-      const pf=zip.file('photos/'+label+'.jpg');
+    for(const pid of allPhotoIds()){
+      const pf=zip.file('photos/'+(photoLabels[pid]||pid)+'.jpg');
       if(pf){
         const blob=await pf.async('blob');
         window._photos[pid]={blob,label:pid};
         const url=URL.createObjectURL(blob);
-        const th=document.getElementById('th_'+pid),pv=document.getElementById('pv_'+pid),st=document.getElementById('st_'+pid);
-        if(th) th.src=url; if(pv) pv.classList.add('visible'); if(st){st.textContent='Done';st.className='photo-status done';}
+        const th=document.getElementById('th_'+pid);
+        const st=document.getElementById('st_'+pid);
+        if(th){th.src=url;th.classList.add('visible');}
+        if(st){st.textContent='Done';st.className='photo-status done';}
       }
     }
-    updateProgress(); window.scrollTo({top:0,behavior:'smooth'});
-  } catch(e) { alert('Could not read ZIP. Make sure it was exported from this app.'); }
+    updateProgress();updateSitePhotosGrid();
+    window.scrollTo({top:0,behavior:'smooth'});
+  } catch(e){alert('Could not read ZIP. Make sure it was exported from this app.');}
 }
 
 function importJson(file) {
   const reader=new FileReader();
   reader.onload=e=>{
-    try {
-      const data=JSON.parse(e.target.result); if(!data.state) throw new Error('bad');
+    try{
+      const data=JSON.parse(e.target.result);if(!data.state) throw new Error('bad');
       if(!confirm('Load "' + (data.name||'Survey') + '"? This replaces everything on screen.')) return;
-      clearAll(); restoreState(data.state); if(data.name) document.getElementById('saveName').value=data.name;
+      clearAll();restoreState(data.state);
+      if(data.name) document.getElementById('saveName').value=data.name;
       window.scrollTo({top:0,behavior:'smooth'});
-    } catch { alert('Could not read that file.'); }
+    }catch{alert('Could not read that file.');}
   };
   reader.readAsText(file);
-}
-
-// ── PHOTO REPORT ──────────────────────────────────────────────────────────────
-async function openPhotoReport() {
-  const photos=window._photos||{};
-  const venue=document.getElementById('f_venueName').value||'Venue';
-  const dated=document.getElementById('f_recceDate').value||new Date().toISOString().slice(0,10);
-  const prod=document.getElementById('f_prodName').value||'';
-  const taken=allPhotoIds().filter(id=>photos[id]&&photos[id].blob);
-  if(!taken.length){alert('No photos taken yet.');return;}
-  const dataUrls={};
-  for(const id of taken){
-    dataUrls[id]=await new Promise(resolve=>{const r=new FileReader();r.onload=e=>resolve(e.target.result);r.readAsDataURL(photos[id].blob);});
-  }
-  const labelFor=id=>photoItems.find(p=>p.id===id)?.label||(id==='sketch'?'Sketch / Floor Plan':id);
-  const rows=[];
-  for(let i=0;i<taken.length;i+=2){
-    const a=taken[i],b=taken[i+1];
-    rows.push(`<tr>
-      <td style="width:50%;padding:8px;vertical-align:top;"><img src="${dataUrls[a]}" style="width:100%;border-radius:4px;display:block;"><p style="margin-top:6px;font-size:12px;font-weight:600;color:#333;">${labelFor(a)}</p></td>
-      ${b?`<td style="width:50%;padding:8px;vertical-align:top;"><img src="${dataUrls[b]}" style="width:100%;border-radius:4px;display:block;"><p style="margin-top:6px;font-size:12px;font-weight:600;color:#333;">${labelFor(b)}</p></td>`:'<td></td>'}
-    </tr>`);
-  }
-  const html=`<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Photo Report — ${venue}</title><style>body{font-family:-apple-system,sans-serif;margin:0;padding:20px;background:white;color:#222;}h1{font-size:22px;margin:0 0 4px;}p.sub{font-size:13px;color:#666;margin:0 0 20px;}table{width:100%;border-collapse:collapse;}.print-btn{background:#0a1628;color:white;border:none;padding:10px 24px;border-radius:4px;font-size:14px;cursor:pointer;margin-bottom:20px;}@media print{.print-btn{display:none;}}</style></head><body>
-  <button class="print-btn" onclick="window.print()">Print / Save as PDF</button>
-  <h1>Photo Report</h1><p class="sub">${prod?prod+' — ':''}${venue} | ${dated} | ${taken.length} photo${taken.length!==1?'s':''}</p>
-  <table>${rows.join('')}</table></body></html>`;
-  const blob=new Blob([html],{type:'text/html'}),url=URL.createObjectURL(blob);
-  window.open(url,'_blank'); setTimeout(()=>URL.revokeObjectURL(url),15000);
 }
 
 // ── INJECTED STYLES ───────────────────────────────────────────────────────────
@@ -1219,7 +1318,7 @@ const style=document.createElement('style');
 style.textContent=`
   .loader-panel{background:rgba(18,32,64,0.9);border:1px solid rgba(200,168,75,0.2);border-radius:4px;padding:16px 20px;margin-bottom:20px;}
   .loader-btns{display:flex;gap:10px;flex-wrap:wrap;}
-  .loader-btn{display:flex;align-items:center;gap:8px;padding:10px 20px;border-radius:3px;font-size:0.9rem;font-weight:600;cursor:pointer;transition:all 0.15s;border:1px solid;}
+  .loader-btn{display:flex;align-items:center;gap:8px;padding:10px 18px;border-radius:3px;font-size:0.88rem;font-weight:600;cursor:pointer;transition:all 0.15s;border:1px solid;}
   .loader-btn.new{background:linear-gradient(135deg,#c8a84b,#e8c96a);color:#0a1628;border-color:#c8a84b;}
   .loader-btn.new:hover{transform:translateY(-1px);}
   .loader-btn.load{background:transparent;color:#f4f6fa;border-color:rgba(255,255,255,0.25);}
@@ -1241,27 +1340,28 @@ style.textContent=`
 document.head.appendChild(style);
 
 // ── INIT ──────────────────────────────────────────────────────────────────────
-document.addEventListener('DOMContentLoaded', () => {
-  Object.entries(ynSections).forEach(([id,items]) => buildYN(id,items));
+document.addEventListener('DOMContentLoaded',()=>{
+  Object.entries(ynSections).forEach(([id,items])=>buildYN(id,items));
   buildHazards();
   buildPhotos();
-  document.getElementById('f_recceDate').valueAsDate = new Date();
+  document.getElementById('f_recceDate').valueAsDate=new Date();
   updateProgress();
   renderSaved(null);
-  document.addEventListener('input', e => {
-    if (e.target.tagName==='TEXTAREA') { e.target.style.height='auto'; e.target.style.height=e.target.scrollHeight+'px'; }
+  updateSitePhotosGrid();
+  document.addEventListener('input',e=>{
+    if(e.target.tagName==='TEXTAREA'){e.target.style.height='auto';e.target.style.height=e.target.scrollHeight+'px';}
   });
-  document.getElementById('mapSearch').addEventListener('keydown', e => { if(e.key==='Enter') loadMap(); });
-  document.getElementById('f_address').addEventListener('blur', function() {
+  document.getElementById('mapSearch').addEventListener('keydown',e=>{if(e.key==='Enter') loadMap();});
+  document.getElementById('f_address').addEventListener('blur',function(){
     const v=[this.value,document.getElementById('f_suburb').value,document.getElementById('f_state').value].filter(Boolean).join(', ');
     if(v) document.getElementById('mapSearch').value=v;
   });
-  document.getElementById('f_prodName').addEventListener('input', function() {
-    const sn=document.getElementById('saveName'); if(!sn.value) sn.value=this.value;
+  document.getElementById('f_prodName').addEventListener('input',function(){
+    const sn=document.getElementById('saveName');if(!sn.value) sn.value=this.value;
   });
 });
 
-if ('serviceWorker' in navigator) { navigator.serviceWorker.register('/Tech-Survey/sw.js', {scope: '/Tech-Survey/'}).catch(()=>{}); }
+if('serviceWorker' in navigator){navigator.serviceWorker.register('/Tech-Survey/sw.js',{scope:'/Tech-Survey/'}).catch(()=>{});}
 </script>
 </body>
 </html>
