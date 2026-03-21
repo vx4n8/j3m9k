@@ -614,14 +614,17 @@ footer { text-align: center; padding: 22px 20px; color: var(--grey); font-size: 
           <label>Survey Name</label>
           <input type="text" id="saveName" placeholder="e.g. Crown Casino — Main Ballroom">
         </div>
-        <button id="btnSave" class="btn-save" style="padding:9px 22px;font-size:0.9rem;white-space:nowrap;flex-shrink:0;" onclick="saveSurvey()">Save Survey</button>
+        <button id="btnSave" class="btn-save" style="padding:9px 22px;font-size:0.9rem;white-space:nowrap;flex-shrink:0;" onclick="saveSurvey()"><span id="btnSaveLabel">Save Survey</span></button>
       </div>
     </div>
   </div>
 
+  <!-- hidden report container for iOS print -->
+  <div id="reportContainer" style="display:none;"></div>
+
   <div class="action-wrap">
     <button class="btn-save" onclick="exportSurvey()">Export Survey</button>
-    <button class="btn-outline" onclick="generateReport()">Generate Report</button>
+    <button class="btn-outline" id="btnReport" onclick="generateReport()">Generate Report</button>
   </div>
 
 </main>
@@ -1010,6 +1013,9 @@ async function saveSurvey() {
       }
     }
     renderSaved(key);
+    const lbl=document.getElementById('btnSaveLabel');
+    if(lbl){lbl.innerHTML='Save Survey &nbsp;<span style="color:#0a1628;font-size:1rem;">✓</span>';}
+    document.getElementById('btnSave').style.background='linear-gradient(135deg,#27ae60,#2ecc71)';
   } catch(e){alert('Could not save: '+e.message);}
 }
 
@@ -1085,7 +1091,10 @@ function clearAll() {
 
 function newSurvey() {
   if(document.getElementById('f_prodName').value.trim()){if(!confirm('Start a new survey? Unsaved changes will be lost.')) return;}
-  clearAll();window._activeKey=null;renderSaved(null);updateProgress();window.scrollTo({top:0,behavior:'smooth'});
+  clearAll();window._activeKey=null;renderSaved(null);updateProgress();
+  const lbl=document.getElementById('btnSaveLabel');if(lbl)lbl.innerHTML='Save Survey';
+  document.getElementById('btnSave').style.background='';
+  window.scrollTo({top:0,behavior:'smooth'});
 }
 
 function toggleLoader() {
@@ -1260,8 +1269,23 @@ async function generateReport() {
 
   const reportWin=window.open('','_blank');
   if(reportWin){reportWin.document.write(html);reportWin.document.close();}
-  else{const blob=new Blob([html],{type:'text/html'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.target='_blank';document.body.appendChild(a);a.click();document.body.removeChild(a);setTimeout(()=>URL.revokeObjectURL(url),30000);}
-}
+  else{
+    // iOS fallback — write into hidden iframe and print
+    let iframe=document.getElementById('reportFrame');
+    if(!iframe){iframe=document.createElement('iframe');iframe.id='reportFrame';iframe.style.cssText='position:fixed;top:0;left:0;width:100%;height:100%;border:none;z-index:99999;background:white;';document.body.appendChild(iframe);}
+    iframe.style.display='block';
+    iframe.contentDocument.open();
+    iframe.contentDocument.write(html.replace('onclick="window.print()"','onclick="window.parent.printReport()"'));
+    iframe.contentDocument.close();
+    window.printReport=function(){window.print();};
+    window.closeReport=function(){iframe.style.display='none';};
+    // Add close button
+    const closeBtn=iframe.contentDocument.createElement('button');
+    closeBtn.textContent='✕ Close';
+    closeBtn.style.cssText='position:fixed;top:10px;right:10px;background:#c0392b;color:white;border:none;padding:8px 16px;border-radius:4px;font-size:14px;cursor:pointer;z-index:9999;';
+    closeBtn.onclick=function(){window.closeReport();};
+    iframe.contentDocument.body.appendChild(closeBtn);
+  }
 
 // ── IMPORT ────────────────────────────────────────────────────────────────────
 async function importFile(input) {
