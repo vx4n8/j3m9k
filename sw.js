@@ -1,8 +1,9 @@
-const CACHE = 'recce-survey-v1';
+const CACHE = 'recce-survey-v2';
 const ASSETS = [
-'/Tech-Survey/',
+  '/Tech-Survey/',
   '/Tech-Survey/index.html',
-  '/Tech-Survey/manifest.json'
+  '/Tech-Survey/manifest.json',
+  '/Tech-Survey/sw.js'
 ];
 
 self.addEventListener('install', e => {
@@ -31,7 +32,7 @@ self.addEventListener('fetch', e => {
           caches.open(CACHE).then(cache => cache.put(e.request, clone));
         }
         return response;
-     }).catch(() => caches.match('/Tech-Survey/index.html'));
+      }).catch(() => caches.match('/Tech-Survey/index.html'));
     })
   );
 });
