@@ -248,7 +248,7 @@ footer{text-align:center;padding:22px 20px;color:var(--grey);font-size:0.75rem;l
   <div class="form-intro">
     <h2>Tech Recce / Location Survey</h2>
     <div class="gold-line"></div>
-    <p>Complete all sections on site.</p>
+    
   </div>
   <!-- LOADER -->
   <div class="loader-panel" id="loaderPanel">
@@ -483,7 +483,7 @@ footer{text-align:center;padding:22px 20px;color:var(--grey);font-size:0.75rem;l
   </div>
   <!-- SEC 13: PHOTO DOCUMENTATION -->
   <div class="section collapsed" id="sec13">
-    <div class="section-header collapsible" onclick="toggleSection('sec13')"><div class="section-num">13</div><div class="section-title">Photo Documentation</div><span class="section-tag">Camera or upload for each</span><span class="collapse-icon">&#9660;</span></div>
+    <div class="section-header collapsible" onclick="toggleSection('sec13')"><div class="section-num">13</div><div class="section-title">Photo</div><span class="section-tag">Camera or upload</span><span class="collapse-icon">&#9660;</span></div>
     <div class="section-body"><div class="photo-list" id="photoList"></div></div>
   </div>
   <!-- SEC 14: SITE PHOTOS -->
@@ -1148,8 +1148,8 @@ function generateReport(){
     if(takenIds.length)html+='<h2>Site Photos</h2><table>'+photoRows.join('')+'</table>';
     html+='</div></body></html>';
     var rw=window.open('','_blank');
-    if(rw){rw.document.open();rw.document.write(html);rw.document.close();setTimeout(function(){try{rw.print();}catch(e){}},800);}
-    else{var iframe=document.getElementById('reportFrame');if(!iframe){iframe=document.createElement('iframe');iframe.id='reportFrame';iframe.style.cssText='position:fixed;top:0;left:0;width:100%;height:100%;border:none;z-index:99999;background:white;';document.body.appendChild(iframe);}iframe.style.display='block';iframe.contentDocument.open();iframe.contentDocument.write(html);iframe.contentDocument.close();setTimeout(function(){try{iframe.contentWindow.print();}catch(e){}setTimeout(function(){iframe.style.display='none';},1500);},800);}
+    if(rw){rw.document.open();rw.document.write(html);rw.document.close();}
+    else{var iframe=document.getElementById('reportFrame');if(!iframe){iframe=document.createElement('iframe');iframe.id='reportFrame';iframe.style.cssText='position:fixed;top:0;left:0;width:100%;height:100%;border:none;z-index:99999;background:white;';document.body.appendChild(iframe);}iframe.style.display='block';iframe.contentDocument.open();iframe.contentDocument.write(html);iframe.contentDocument.close();}
   });
 }
 
