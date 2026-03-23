@@ -521,7 +521,7 @@ footer{text-align:center;padding:22px 20px;color:var(--hint);font-size:0.75rem;l
     <a href="https://patriceroblin.com" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>patriceroblin.com</a>
   </div>
 </footer>
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 var isSafari=/^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 
 // ACCORDION - one section open at a time, scroll to top of opened section
@@ -1331,4 +1331,10 @@ document.addEventListener('DOMContentLoaded',function(){
   // TX date change - refetch weather
   document.getElementById('f_txDate').addEventListener('change',function(){
     checkJobDetailsWarning();
-    autoGeocodeFromJobDetails(
+    autoGeocodeFromJobDetails();
+  });
+
+});
+</script>
+</body>
+</html>
