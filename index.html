@@ -792,6 +792,12 @@ function removeLightboxPhoto(){
   var entry=_lbIds[_lbIdx];
   if(!entry)return;
   removePhoto(entry.id,entry.idx);
+  var allIds=getAllPhotoIds();
+  _lbIds=[];
+  allIds.forEach(function(pid){
+    var arr=window._photos[pid]||[];
+    arr.forEach(function(ph,i){_lbIds.push({id:pid,idx:i});});
+  });
   if(!_lbIds.length){closeLightbox();return;}
   _lbIdx=Math.min(_lbIdx,_lbIds.length-1);
   showLightboxFrame(_lbIdx);
