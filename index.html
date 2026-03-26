@@ -255,7 +255,7 @@ footer{text-align:center;padding:22px 20px;color:var(--hint);font-size:0.75rem;l
     <div class="gold-line"></div>
     
   </div>
-  <div class="edition-label">Live TV / Outside Broadcast Edition</div>
+  <div class="edition-label">Live TV / Outside Broadcast module </div>
   <!-- LOADER -->
   <div class="loader-panel" id="loaderPanel">
     <div class="loader-btns">
@@ -1244,7 +1244,7 @@ function generateReport(){
     var html='<!DOCTYPE html><html><head><meta charset="UTF-8"><title>REKON Survey — '+fv('f_venueName','Venue')+'</title><style>'+css+'</style></head><body>';
     html+='<div class="top-bar"><svg viewBox="0 0 900 100" xmlns="http://www.w3.org/2000/svg"><text x="14" y="82" style="font-size:88px;font-weight:300;fill:#111;font-family:sans-serif;">R</text><text x="84" y="82" style="font-size:88px;font-weight:300;fill:#111;font-family:sans-serif;">E</text><text x="196" y="82" text-anchor="middle" style="font-size:88px;font-weight:300;fill:#0099FF;font-family:sans-serif;">K</text><text x="248" y="82" style="font-size:88px;font-weight:300;fill:#111;font-family:sans-serif;">O</text><text x="324" y="82" style="font-size:88px;font-weight:300;fill:#111;font-family:sans-serif;">N</text><line x1="420" y1="14" x2="420" y2="90" stroke="#ccc" stroke-width="1"/><text x="434" y="52" style="font-size:15px;font-weight:400;fill:#888;font-family:sans-serif;letter-spacing:0.14em;">TECHNICAL SURVEY,</text><text x="434" y="76" style="font-size:15px;font-weight:400;fill:#0099FF;font-family:sans-serif;letter-spacing:0.14em;">REDESIGNED</text></svg></div>';
     html+='<div class="blue-line"></div>';
-    html+='<div class="survey-title">Tech Recce / Location Survey &nbsp;—&nbsp; Live TV / Outside Broadcast Edition</div>';
+    html+='<div class="survey-title">Tech Recce / Location Survey &nbsp;—&nbsp; Live TV / Outside Broadcast module </div>';
     html+='<div class="meta"><span><strong>Production:</strong> '+fv('f_prodName')+'</span><span><strong>Venue:</strong> '+fv('f_venueName')+'</span><span><strong>TX Date:</strong> '+fv('f_txDate')+'</span><span><strong>Recce Date:</strong> '+fv('f_recceDate')+'</span><span><strong>Officer:</strong> '+fv('f_officer')+'</span></div>';
     html+='<div class="page"><button class="print-btn" onclick="window.print()">Print / Save as PDF</button>'+alertsHtml;
     html+='<h2>Project Details</h2>'+fr('Production',fv('f_prodName'))+fr('TX Date',fv('f_txDate'))+fr('Recce Date',fv('f_recceDate'))+fr('Officer',fv('f_officer'))+fr('Venue',fv('f_venueName'))+fr('Address',fv('f_address'))+fr('Suburb',fv('f_suburb'))+fr('State',fv('f_state'))+fr('GPS',fv('f_gps'))+fr('Booking Contact',fv('f_contact'))+fr('Booking Phone',fv('f_phone'))+fr('Tech Contact (On Day)',fv('f_techContact'))+fr('Tech Phone',fv('f_techPhone'));
