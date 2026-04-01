@@ -1362,9 +1362,12 @@ document.addEventListener('DOMContentLoaded',function(){
   });
 
 });
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/j3m9k/sw.js');
-  }
+  window.addEventListener('load', function() {
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/j3m9k/sw.js', { scope: '/j3m9k/' })
+        .catch(function(err) { console.warn('SW registration failed:', err); });
+    }
+  });
 </script>
 </body>
 </html>
